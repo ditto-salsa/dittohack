@@ -1,0 +1,42 @@
+PUSH
+
+// Skip H&S warning screen - circleseverywhere
+ORG 0xCC20C
+SHORT 0x46C0
+
+// Disable New Game music - circleseverywhere
+ORG 0xC4A0C
+BYTE 0
+
+// Allow holding A for faster unit movement before game completion - Gryz
+ORG 0x794EE
+SHORT 0x46C0
+
+// Disable Mode Coefficient - Venno
+ORG 0x2C474
+BYTE 0
+
+// Disable Intro Cutscene - circleseverywhere
+ORG 0xC6714
+SHORT 0x46C0
+
+// Disable Intro repeat(?) & Class Roll - Unknown
+ORG 0xC63AD
+BYTE 0xE0
+
+// Skip New Game Text - circleseverywhere
+ORG 0xC4928
+SHORT 0x46C0
+
+// Skip opening world map narration
+ORG 0xA39768
+EVBIT_MODIFY 1
+SKIPWN
+ENDA
+
+POP
+
+#include "AutoGenLeftOAM/Installer.event"
+#include "GameOptionsOnStart.lyn.event"
+
+#include "ResAsMagic.event"

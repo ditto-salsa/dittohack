@@ -1,0 +1,8 @@
+{
+PUSH
+ORG 0x59ACC
+jumpToHack(r3, AutoGenLeftOAM)
+POP
+
+#include "AutoGenLeftOAM.lyn.event"
+}

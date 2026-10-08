@@ -1,0 +1,7 @@
+// Portraits main installer
+
+#define LorienMouthX 2
+#define LorienMouthY 5
+#define LorienEyeX 3
+#define LorienEyeY 3
+#include "dmp/Lorien.portrait.event"

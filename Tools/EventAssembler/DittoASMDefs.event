@@ -1,0 +1,198 @@
+#ifndef DittoASMDefs
+#define DittoASMDefs
+
+#include "Extensions/Hack Installation.txt"
+
+// Any macros that write ARM instructions are prefixed with ARM_
+// Macros such as jumpToARMHack are for jumping to ARM code from THUMB.
+
+#define ThumbFunc(label) "ALIGN 4; PUSH; ORG CURRENTOFFSET+1; label: POP"
+
+// Thumb macros
+
+#define B(cond, to) "SHORT (1101b << 12)|((cond) << 8)|((((to) - CURRENTOFFSET - 4) >> 1) & 0xFF)"
+#define BX(reg) "SHORT (010001110b << 7)|(((reg) >> 3) << 6)|(((reg) & 111b) << 3)"
+
+#define imm_CMP(reg, imm) "BYTE imm (00101b << 3)|(reg)"
+
+#define imm_MOV(reg, imm) "BYTE imm (00100b << 3)|(reg)"
+
+#define ADD(rd, rn, imm) "SHORT (0001110b << 9)|((imm & 7) << 6)|((rn & 7) << 3)|(rd & 7)"
+#define MOV(rd, rn) ADD(rd, rn, 0)
+
+#define _r14 (1 << 8)
+#define _r15 (1 << 8)
+#define r(i) "(1 << (i & 7))" // for use in regList
+#define PUSH(regList) "SHORT (1011010b << 9)|(regList)"
+#define POP(regList) "SHORT (1011110b << 9)|(regList)"
+
+#define jumpToHack(reg,ptr) "SHORT ((1001b << 11)|(reg << 8)) ((1000111b << 8)|(reg << 3)); POIN (ptr|1)"
+#define jumpToARMHack(reg,ptr) "SHORT ((1001b << 11)|(reg << 8)) ((1000111b << 8)|(reg << 3)); POIN (ptr)"
+#define callHack(reg,ptr) "SHORT ((1001b << 11)|(reg << 8)|1); BL((0xD18C0 + (reg * 4))); SHORT 0xE001; POIN (ptr|1)"
+#define callARMHack(reg,ptr) "SHORT ((1001b << 11)|(reg << 8)|1); BL((0xD18C0 + (reg * 4))); SHORT 0xE001; POIN (ptr)"
+
+// Arm macros
+
+#define ARM_BL(cond, to) "WORD ((cond << 28)|(1011b << 24)|(ptr >> 2))"
+#define ARM_BL(to) ARM_BL(AL, to)
+
+#define ARM_jumpToHack(reg, ptr) "WORD ((14 << 28)|(01011001b << 20)|(15 << 16)|(reg << 12)) ((14 << 28)|(000100101111111111110001b << 4)|(reg)); POIN (ptr|1)"
+#define ARM_jumpToARMHack(reg, ptr) "WORD ((14 << 28)|(01011001b << 20)|(15 << 16)|(reg << 12)) ((14 << 28)|(000100101111111111110001b << 4)|(reg)); POIN (ptr)"
+
+// Registers
+#ifdef r0
+        #undef r0
+#endif
+#define r0 0
+#ifdef r1
+        #undef r1
+#endif
+#define r1 1
+#ifdef r2
+        #undef r2
+#endif
+#define r2 2
+#ifdef r3
+        #undef r3
+#endif
+#define r3 3
+#ifdef r4
+        #undef r4
+#endif
+#define r4 4
+#ifdef r5
+        #undef r5
+#endif
+#define r5 5
+#ifdef r6
+        #undef r6
+#endif
+#define r6 6
+#ifdef r7
+        #undef r7
+#endif
+#define r7 7
+#ifdef r8
+        #undef r8
+#endif
+#define r8 8
+#ifdef r9
+        #undef r9
+#endif
+#define r9 9
+#ifdef r10
+        #undef r10
+#endif
+#define r10 10
+#ifdef sl
+        #undef sl
+#endif
+#define sl r10
+#ifdef r11
+        #undef r11
+#endif
+#define r11 11
+#ifdef fp
+        #undef fp
+#endif
+#define fp r11
+#ifdef r12
+        #undef r12
+#endif
+#define r12 12
+#ifdef ip
+        #undef ip
+#endif
+#define ip r12
+#ifdef r13
+        #undef r13
+#endif
+#define r13 13
+#ifdef sp
+        #undef sp
+#endif
+#define sp r13
+#ifdef r14
+        #undef r14
+#endif
+#define r14 14
+#ifdef lr
+        #undef lr
+#endif
+#define lr r14
+#ifdef r15
+        #undef r15
+#endif
+#define r15 15
+#ifdef pc
+        #undef pc
+#endif
+#define pc r15
+
+// Conditional codes
+#ifdef EQ
+        #undef EQ
+#endif
+#define EQ 0
+#ifdef NE
+        #undef NE
+#endif
+#define NE 1
+#ifdef HS
+        #undef HS
+#endif
+#define HS 2
+#ifdef LO
+        #undef LO
+#endif
+#define LO 3
+#ifdef MI
+        #undef MI
+#endif
+#define MI 4
+#ifdef PL
+        #undef PL
+#endif
+#define PL 5
+#ifdef VS
+        #undef VS
+#endif
+#define VS 6
+#ifdef VC
+        #undef VC
+#endif
+#define VC 7
+#ifdef HI
+        #undef HI
+#endif
+#define HI 8
+#ifdef LS
+        #undef LS
+#endif
+#define LS 9
+#ifdef GE
+        #undef GE
+#endif
+#define GE 10
+#ifdef LT
+        #undef LT
+#endif
+#define LT 11
+#ifdef GT
+        #undef GT
+#endif
+#define GT 12
+#ifdef LE
+        #undef LE
+#endif
+#define LE 13
+#ifdef AL
+        #undef AL
+#endif
+#define AL 14
+#ifdef NV
+        #undef NV
+#endif
+#define NV 15
+
+#endif // DittoASMDefs

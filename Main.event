@@ -1,0 +1,16 @@
+#include EAstdlib.event
+#include DittoASMDefs.event
+#include "Definitions/Installer.event"
+
+#include "FreeSpaceCreator.event"
+
+ORG FreeSpace
+
+// Engine hacks
+#include "EngineHacks/Installer.event"
+MESSAGE Engine Hacks end at CURRENTOFFSET
+
+// Graphics
+#include "Graphics/Installer.event"
+MESSAGE Graphics end at CURRENTOFFSET
+

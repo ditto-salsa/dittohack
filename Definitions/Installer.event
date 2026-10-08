@@ -1,0 +1,5 @@
+// Defintions Installer
+
+#include "Characters.evnum"
+#include "Items.evnum"
+#include "Portraits.evnum"
