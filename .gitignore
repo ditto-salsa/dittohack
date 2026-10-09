@@ -1,0 +1,22 @@
+# Rom stuff
+*.gba
+*.ups
+*.sav
+*.sgm
+*.ss1
+*.ss2
+*.ss3
+*.ss4
+*.ss5
+*.ss6
+*.ss7
+*.ss8
+*.ss9
+*.sym
+
+# Make output
+*.lz77
+*.4bpp
+*.pal
+*.o
+*.lyn.event
