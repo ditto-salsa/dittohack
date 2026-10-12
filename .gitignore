@@ -15,6 +15,7 @@
 *.sym
 
 # Make output
+*.portrait.event
 *.lz77
 *.4bpp
 *.pal
