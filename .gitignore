@@ -18,5 +18,6 @@
 *.lz77
 *.4bpp
 *.pal
+*.dmp
 *.o
 *.lyn.event

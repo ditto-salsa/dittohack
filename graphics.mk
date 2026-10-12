@@ -10,6 +10,8 @@ GRIT2BPPARGS		:= -gu 16 -gb -gB 2 -p! -m! -ft bin -fh!
 GRITPALETTEARGS		:= -g! -m! -p -ft bin -fh!
 GRIT10PALETTEARGS	:= -g! -m! -p -pe 160 -ft bin -fh!
 
+PORTRAIT_DMPS       := $(realpath .)/Graphics/Portraits/dmp
+
 %.4bpp: %.png
 	cd $(dir $@) && $(GRIT) $< $(GRIT4BPPARGS)
 	@mv $(basename $<).img.bin $@
@@ -38,10 +40,5 @@ GRIT10PALETTEARGS	:= -g! -m! -p -pe 160 -ft bin -fh!
 $(PORTRAIT_DMPS):
 	mkdir $@
 
-%.portrait.event: ../img/%.png $(PORTRAIT_DMPS)
-	$(PORTRAITFORMATTER) $<
-	@mv $(basename $<)_mug.dmp $(dir $@)
-	@mv $(basename $<)_minimug.dmp $(dir $@)
-	@mv $(basename $<)_frames.dmp $(dir $@)
-	@mv $(basename $<)_palette.dmp $(dir $@)
-	$(INSTALLPORTRAITS) $< --output $@
+%.portrait.event: ../png/%.png $(PORTRAIT_DMPS)
+	cd $(dir $<) && $(PORTRAITS2DMP) $(notdir $<)

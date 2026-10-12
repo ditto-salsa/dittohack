@@ -17,12 +17,8 @@ endif
 # including devkitARM tool definitions
 include $(DEVKITARM)/base_tools
 
-# making sure we are using python 3
-ifeq ($(shell python3 -c 'import sys; print(int(sys.version_info[0] > 2))'),1)
-	export PYTHON3 := python
-else
-	export PYTHON3 := python3
-endif
+# Python variable for this evil language
+PYTHON              := python3
 
 # EA
 EA 					:= $(realpath .)/Tools/EventAssembler
@@ -38,4 +34,4 @@ GRIT 				:= $(DEVKITPRO)/tools/bin/grit$(EXE)
 PARSEFILE 			:= $(EA)/Tools/ParseFile$(EXE)
 COMPRESS 			:= $(EA)/Tools/compress$(EXE)
 PORTRAITFORMATTER 	:= $(EA)/Tools/PortraitFormatter$(EXE)
-INSTALLPORTAITS     := $(PYTHON3) $(SCRIPT_DIR)/PortraitInstallerGenerator.py
+PORTRAITS2DMP       := $(PYTHON) $(SCRIPT_DIR)/portraits2dmp.py

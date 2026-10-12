@@ -1,5 +1,6 @@
 // Defintions Installer
 
+PortraitTable := 0x8ACBC4
+
 #include "Characters.evnum"
 #include "Items.evnum"
-#include "Portraits.evnum"

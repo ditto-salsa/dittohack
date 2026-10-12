@@ -5,10 +5,6 @@ include wizardry.mk
 FE8_ROM := FE8_clean.gba
 HACK_ROM := dittohack.gba
 
-hack: $(HACK_ROM)
-
-.PHONY: hack %.dmp
-
 # =============================
 # = GENERATING EA DEFINITIONS =
 # =============================
@@ -23,16 +19,15 @@ hack: $(HACK_ROM)
 
 MAIN_EVENT := Main.event
 
-PORTRAIT_DMPS := $(realpath .)/Graphics/Portraits/dmp
-
 MAIN_DEPENDS := $(shell $(EA_DEP) $(MAIN_EVENT) -I $(EA) --add-missings)
 
-$(HACK_ROM): $(FE8_ROM) $(MAIN_EVENT) $(MAIN_DEPENDS)
+hack: $(FE8_ROM) $(MAIN_EVENT) $(MAIN_DEPENDS)
 	@cp -f $(FE8_ROM) $(HACK_ROM)
 	$(COLORZCORE) A FE8 -input:$(MAIN_EVENT) -output:$(HACK_ROM) -W:no-redefine:no-set-symbol-macros || rm -f $(HACK_ROM)
 
 clean:
 	@rm -rf $(PORTRAIT_DMPS)/*
+	@find . -name *.dmp -type f -delete
 	@find . -name *.lz77 -type f -delete
 	@find . -name *.pal -type f -delete
 	@find . -name *.4bpp -type f -delete
