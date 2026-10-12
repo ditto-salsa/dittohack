@@ -1,690 +1,690 @@
 BPEntry(0x00,BPImage00,BPPalette00)
 ALIGN 4; BPImage00:
-#incbin "img/BPImage00.lz77"
+#incbin "dmp/BPImage00.lz77"
 ALIGN 4; BPPalette00:
-#incbin "img/BPImage00.pal"
+#incbin "dmp/BPImage00.pal"
 
 BPEntry(0x01,BPImage01,BPPalette01)
 ALIGN 4; BPImage01:
-#incbin "img/BPImage01.lz77"
+#incbin "dmp/BPImage01.lz77"
 ALIGN 4; BPPalette01:
-#incbin "img/BPImage01.pal"
+#incbin "dmp/BPImage01.pal"
 
 BPEntry(0x02,BPImage02,BPPalette02)
 ALIGN 4; BPImage02:
-#incbin "img/BPImage02.lz77"
+#incbin "dmp/BPImage02.lz77"
 ALIGN 4; BPPalette02:
-#incbin "img/BPImage02.pal"
+#incbin "dmp/BPImage02.pal"
 
 BPEntry(0x03,BPImage03,BPPalette03)
 ALIGN 4; BPImage03:
-#incbin "img/BPImage03.lz77"
+#incbin "dmp/BPImage03.lz77"
 ALIGN 4; BPPalette03:
-#incbin "img/BPImage03.pal"
+#incbin "dmp/BPImage03.pal"
 
 BPEntry(0x04,BPImage04,BPPalette04)
 ALIGN 4; BPImage04:
-#incbin "img/BPImage04.lz77"
+#incbin "dmp/BPImage04.lz77"
 ALIGN 4; BPPalette04:
-#incbin "img/BPImage04.pal"
+#incbin "dmp/BPImage04.pal"
 
 BPEntry(0x05,BPImage05,BPPalette05)
 ALIGN 4; BPImage05:
-#incbin "img/BPImage05.lz77"
+#incbin "dmp/BPImage05.lz77"
 ALIGN 4; BPPalette05:
-#incbin "img/BPImage05.pal"
+#incbin "dmp/BPImage05.pal"
 
 BPEntry(0x06,BPImage06,BPPalette06)
 ALIGN 4; BPImage06:
-#incbin "img/BPImage06.lz77"
+#incbin "dmp/BPImage06.lz77"
 ALIGN 4; BPPalette06:
-#incbin "img/BPImage06.pal"
+#incbin "dmp/BPImage06.pal"
 
 BPEntry(0x07,BPImage07,BPPalette07)
 ALIGN 4; BPImage07:
-#incbin "img/BPImage07.lz77"
+#incbin "dmp/BPImage07.lz77"
 ALIGN 4; BPPalette07:
-#incbin "img/BPImage07.pal"
+#incbin "dmp/BPImage07.pal"
 
 BPEntry(0x08,BPImage08,BPPalette08)
 ALIGN 4; BPImage08:
-#incbin "img/BPImage08.lz77"
+#incbin "dmp/BPImage08.lz77"
 ALIGN 4; BPPalette08:
-#incbin "img/BPImage08.pal"
+#incbin "dmp/BPImage08.pal"
 
 BPEntry(0x09,BPImage09,BPPalette09)
 ALIGN 4; BPImage09:
-#incbin "img/BPImage09.lz77"
+#incbin "dmp/BPImage09.lz77"
 ALIGN 4; BPPalette09:
-#incbin "img/BPImage09.pal"
+#incbin "dmp/BPImage09.pal"
 
 BPEntry(0x0A,BPImage0A,BPPalette0A)
 ALIGN 4; BPImage0A:
-#incbin "img/BPImage0A.lz77"
+#incbin "dmp/BPImage0A.lz77"
 ALIGN 4; BPPalette0A:
-#incbin "img/BPImage0A.pal"
+#incbin "dmp/BPImage0A.pal"
 
 BPEntry(0x0B,BPImage0B,BPPalette0B)
 ALIGN 4; BPImage0B:
-#incbin "img/BPImage0B.lz77"
+#incbin "dmp/BPImage0B.lz77"
 ALIGN 4; BPPalette0B:
-#incbin "img/BPImage0B.pal"
+#incbin "dmp/BPImage0B.pal"
 
 BPEntry(0x0C,BPImage0C,BPPalette0C)
 ALIGN 4; BPImage0C:
-#incbin "img/BPImage0C.lz77"
+#incbin "dmp/BPImage0C.lz77"
 ALIGN 4; BPPalette0C:
-#incbin "img/BPImage0C.pal"
+#incbin "dmp/BPImage0C.pal"
 
 BPEntry(0x0D,BPImage0D,BPPalette0D)
 ALIGN 4; BPImage0D:
-#incbin "img/BPImage0D.lz77"
+#incbin "dmp/BPImage0D.lz77"
 ALIGN 4; BPPalette0D:
-#incbin "img/BPImage0D.pal"
+#incbin "dmp/BPImage0D.pal"
 
 BPEntry(0x0E,BPImage0E,BPPalette0E)
 ALIGN 4; BPImage0E:
-#incbin "img/BPImage0E.lz77"
+#incbin "dmp/BPImage0E.lz77"
 ALIGN 4; BPPalette0E:
-#incbin "img/BPImage0E.pal"
+#incbin "dmp/BPImage0E.pal"
 
 BPEntry(0x0F,BPImage0F,BPPalette0F)
 ALIGN 4; BPImage0F:
-#incbin "img/BPImage0F.lz77"
+#incbin "dmp/BPImage0F.lz77"
 ALIGN 4; BPPalette0F:
-#incbin "img/BPImage0F.pal"
+#incbin "dmp/BPImage0F.pal"
 
 BPEntry(0x10,BPImage10,BPPalette10)
 ALIGN 4; BPImage10:
-#incbin "img/BPImage10.lz77"
+#incbin "dmp/BPImage10.lz77"
 ALIGN 4; BPPalette10:
-#incbin "img/BPImage10.pal"
+#incbin "dmp/BPImage10.pal"
 
 BPEntry(0x11,BPImage11,BPPalette11)
 ALIGN 4; BPImage11:
-#incbin "img/BPImage11.lz77"
+#incbin "dmp/BPImage11.lz77"
 ALIGN 4; BPPalette11:
-#incbin "img/BPImage11.pal"
+#incbin "dmp/BPImage11.pal"
 
 BPEntry(0x12,BPImage12,BPPalette12)
 ALIGN 4; BPImage12:
-#incbin "img/BPImage12.lz77"
+#incbin "dmp/BPImage12.lz77"
 ALIGN 4; BPPalette12:
-#incbin "img/BPImage12.pal"
+#incbin "dmp/BPImage12.pal"
 
 BPEntry(0x13,BPImage13,BPPalette13)
 ALIGN 4; BPImage13:
-#incbin "img/BPImage13.lz77"
+#incbin "dmp/BPImage13.lz77"
 ALIGN 4; BPPalette13:
-#incbin "img/BPImage13.pal"
+#incbin "dmp/BPImage13.pal"
 
 BPEntry(0x14,BPImage14,BPPalette14)
 ALIGN 4; BPImage14:
-#incbin "img/BPImage14.lz77"
+#incbin "dmp/BPImage14.lz77"
 ALIGN 4; BPPalette14:
-#incbin "img/BPImage14.pal"
+#incbin "dmp/BPImage14.pal"
 
 BPEntry(0x15,BPImage15,BPPalette15)
 ALIGN 4; BPImage15:
-#incbin "img/BPImage15.lz77"
+#incbin "dmp/BPImage15.lz77"
 ALIGN 4; BPPalette15:
-#incbin "img/BPImage15.pal"
+#incbin "dmp/BPImage15.pal"
 
 BPEntry(0x16,BPImage16,BPPalette16)
 ALIGN 4; BPImage16:
-#incbin "img/BPImage16.lz77"
+#incbin "dmp/BPImage16.lz77"
 ALIGN 4; BPPalette16:
-#incbin "img/BPImage16.pal"
+#incbin "dmp/BPImage16.pal"
 
 BPEntry(0x17,BPImage17,BPPalette17)
 ALIGN 4; BPImage17:
-#incbin "img/BPImage17.lz77"
+#incbin "dmp/BPImage17.lz77"
 ALIGN 4; BPPalette17:
-#incbin "img/BPImage17.pal"
+#incbin "dmp/BPImage17.pal"
 
 BPEntry(0x18,BPImage18,BPPalette18)
 ALIGN 4; BPImage18:
-#incbin "img/BPImage18.lz77"
+#incbin "dmp/BPImage18.lz77"
 ALIGN 4; BPPalette18:
-#incbin "img/BPImage18.pal"
+#incbin "dmp/BPImage18.pal"
 
 BPEntry(0x19,BPImage19,BPPalette19)
 ALIGN 4; BPImage19:
-#incbin "img/BPImage19.lz77"
+#incbin "dmp/BPImage19.lz77"
 ALIGN 4; BPPalette19:
-#incbin "img/BPImage19.pal"
+#incbin "dmp/BPImage19.pal"
 
 BPEntry(0x1A,BPImage1A,BPPalette1A)
 ALIGN 4; BPImage1A:
-#incbin "img/BPImage1A.lz77"
+#incbin "dmp/BPImage1A.lz77"
 ALIGN 4; BPPalette1A:
-#incbin "img/BPImage1A.pal"
+#incbin "dmp/BPImage1A.pal"
 
 BPEntry(0x1B,BPImage1B,BPPalette1B)
 ALIGN 4; BPImage1B:
-#incbin "img/BPImage1B.lz77"
+#incbin "dmp/BPImage1B.lz77"
 ALIGN 4; BPPalette1B:
-#incbin "img/BPImage1B.pal"
+#incbin "dmp/BPImage1B.pal"
 
 BPEntry(0x1C,BPImage1C,BPPalette1C)
 ALIGN 4; BPImage1C:
-#incbin "img/BPImage1C.lz77"
+#incbin "dmp/BPImage1C.lz77"
 ALIGN 4; BPPalette1C:
-#incbin "img/BPImage1C.pal"
+#incbin "dmp/BPImage1C.pal"
 
 BPEntry(0x1D,BPImage1D,BPPalette1D)
 ALIGN 4; BPImage1D:
-#incbin "img/BPImage1D.lz77"
+#incbin "dmp/BPImage1D.lz77"
 ALIGN 4; BPPalette1D:
-#incbin "img/BPImage1D.pal"
+#incbin "dmp/BPImage1D.pal"
 
 BPEntry(0x1E,BPImage1E,BPPalette1E)
 ALIGN 4; BPImage1E:
-#incbin "img/BPImage1E.lz77"
+#incbin "dmp/BPImage1E.lz77"
 ALIGN 4; BPPalette1E:
-#incbin "img/BPImage1E.pal"
+#incbin "dmp/BPImage1E.pal"
 
 BPEntry(0x1F,BPImage1F,BPPalette1F)
 ALIGN 4; BPImage1F:
-#incbin "img/BPImage1F.lz77"
+#incbin "dmp/BPImage1F.lz77"
 ALIGN 4; BPPalette1F:
-#incbin "img/BPImage1F.pal"
+#incbin "dmp/BPImage1F.pal"
 
 BPEntry(0x20,BPImage20,BPPalette20)
 ALIGN 4; BPImage20:
-#incbin "img/BPImage20.lz77"
+#incbin "dmp/BPImage20.lz77"
 ALIGN 4; BPPalette20:
-#incbin "img/BPImage20.pal"
+#incbin "dmp/BPImage20.pal"
 
 BPEntry(0x21,BPImage21,BPPalette21)
 ALIGN 4; BPImage21:
-#incbin "img/BPImage21.lz77"
+#incbin "dmp/BPImage21.lz77"
 ALIGN 4; BPPalette21:
-#incbin "img/BPImage21.pal"
+#incbin "dmp/BPImage21.pal"
 
 BPEntry(0x22,BPImage22,BPPalette22)
 ALIGN 4; BPImage22:
-#incbin "img/BPImage22.lz77"
+#incbin "dmp/BPImage22.lz77"
 ALIGN 4; BPPalette22:
-#incbin "img/BPImage22.pal"
+#incbin "dmp/BPImage22.pal"
 
 BPEntry(0x23,BPImage23,BPPalette23)
 ALIGN 4; BPImage23:
-#incbin "img/BPImage23.lz77"
+#incbin "dmp/BPImage23.lz77"
 ALIGN 4; BPPalette23:
-#incbin "img/BPImage23.pal"
+#incbin "dmp/BPImage23.pal"
 
 BPEntry(0x24,BPImage24,BPPalette24)
 ALIGN 4; BPImage24:
-#incbin "img/BPImage24.lz77"
+#incbin "dmp/BPImage24.lz77"
 ALIGN 4; BPPalette24:
-#incbin "img/BPImage24.pal"
+#incbin "dmp/BPImage24.pal"
 
 BPEntry(0x25,BPImage25,BPPalette25)
 ALIGN 4; BPImage25:
-#incbin "img/BPImage25.lz77"
+#incbin "dmp/BPImage25.lz77"
 ALIGN 4; BPPalette25:
-#incbin "img/BPImage25.pal"
+#incbin "dmp/BPImage25.pal"
 
 BPEntry(0x26,BPImage26,BPPalette26)
 ALIGN 4; BPImage26:
-#incbin "img/BPImage26.lz77"
+#incbin "dmp/BPImage26.lz77"
 ALIGN 4; BPPalette26:
-#incbin "img/BPImage26.pal"
+#incbin "dmp/BPImage26.pal"
 
 BPEntry(0x27,BPImage27,BPPalette27)
 ALIGN 4; BPImage27:
-#incbin "img/BPImage27.lz77"
+#incbin "dmp/BPImage27.lz77"
 ALIGN 4; BPPalette27:
-#incbin "img/BPImage27.pal"
+#incbin "dmp/BPImage27.pal"
 
 BPEntry(0x28,BPImage28,BPPalette28)
 ALIGN 4; BPImage28:
-#incbin "img/BPImage28.lz77"
+#incbin "dmp/BPImage28.lz77"
 ALIGN 4; BPPalette28:
-#incbin "img/BPImage28.pal"
+#incbin "dmp/BPImage28.pal"
 
 BPEntry(0x29,BPImage29,BPPalette29)
 ALIGN 4; BPImage29:
-#incbin "img/BPImage29.lz77"
+#incbin "dmp/BPImage29.lz77"
 ALIGN 4; BPPalette29:
-#incbin "img/BPImage29.pal"
+#incbin "dmp/BPImage29.pal"
 
 BPEntry(0x2A,BPImage2A,BPPalette2A)
 ALIGN 4; BPImage2A:
-#incbin "img/BPImage2A.lz77"
+#incbin "dmp/BPImage2A.lz77"
 ALIGN 4; BPPalette2A:
-#incbin "img/BPImage2A.pal"
+#incbin "dmp/BPImage2A.pal"
 
 BPEntry(0x2B,BPImage2B,BPPalette2B)
 ALIGN 4; BPImage2B:
-#incbin "img/BPImage2B.lz77"
+#incbin "dmp/BPImage2B.lz77"
 ALIGN 4; BPPalette2B:
-#incbin "img/BPImage2B.pal"
+#incbin "dmp/BPImage2B.pal"
 
 BPEntry(0x2C,BPImage2C,BPPalette2C)
 ALIGN 4; BPImage2C:
-#incbin "img/BPImage2C.lz77"
+#incbin "dmp/BPImage2C.lz77"
 ALIGN 4; BPPalette2C:
-#incbin "img/BPImage2C.pal"
+#incbin "dmp/BPImage2C.pal"
 
 BPEntry(0x2D,BPImage2D,BPPalette2D)
 ALIGN 4; BPImage2D:
-#incbin "img/BPImage2D.lz77"
+#incbin "dmp/BPImage2D.lz77"
 ALIGN 4; BPPalette2D:
-#incbin "img/BPImage2D.pal"
+#incbin "dmp/BPImage2D.pal"
 
 BPEntry(0x2E,BPImage2E,BPPalette2E)
 ALIGN 4; BPImage2E:
-#incbin "img/BPImage2E.lz77"
+#incbin "dmp/BPImage2E.lz77"
 ALIGN 4; BPPalette2E:
-#incbin "img/BPImage2E.pal"
+#incbin "dmp/BPImage2E.pal"
 
 BPEntry(0x2F,BPImage2F,BPPalette2F)
 ALIGN 4; BPImage2F:
-#incbin "img/BPImage2F.lz77"
+#incbin "dmp/BPImage2F.lz77"
 ALIGN 4; BPPalette2F:
-#incbin "img/BPImage2F.pal"
+#incbin "dmp/BPImage2F.pal"
 
 BPEntry(0x30,BPImage30,BPPalette30)
 ALIGN 4; BPImage30:
-#incbin "img/BPImage30.lz77"
+#incbin "dmp/BPImage30.lz77"
 ALIGN 4; BPPalette30:
-#incbin "img/BPImage30.pal"
+#incbin "dmp/BPImage30.pal"
 
 BPEntry(0x31,BPImage31,BPPalette31)
 ALIGN 4; BPImage31:
-#incbin "img/BPImage31.lz77"
+#incbin "dmp/BPImage31.lz77"
 ALIGN 4; BPPalette31:
-#incbin "img/BPImage31.pal"
+#incbin "dmp/BPImage31.pal"
 
 BPEntry(0x32,BPImage32,BPPalette32)
 ALIGN 4; BPImage32:
-#incbin "img/BPImage32.lz77"
+#incbin "dmp/BPImage32.lz77"
 ALIGN 4; BPPalette32:
-#incbin "img/BPImage32.pal"
+#incbin "dmp/BPImage32.pal"
 
 BPEntry(0x33,BPImage33,BPPalette33)
 ALIGN 4; BPImage33:
-#incbin "img/BPImage33.lz77"
+#incbin "dmp/BPImage33.lz77"
 ALIGN 4; BPPalette33:
-#incbin "img/BPImage33.pal"
+#incbin "dmp/BPImage33.pal"
 
 BPEntry(0x34,BPImage34,BPPalette34)
 ALIGN 4; BPImage34:
-#incbin "img/BPImage34.lz77"
+#incbin "dmp/BPImage34.lz77"
 ALIGN 4; BPPalette34:
-#incbin "img/BPImage34.pal"
+#incbin "dmp/BPImage34.pal"
 
 BPEntry(0x35,BPImage35,BPPalette35)
 ALIGN 4; BPImage35:
-#incbin "img/BPImage35.lz77"
+#incbin "dmp/BPImage35.lz77"
 ALIGN 4; BPPalette35:
-#incbin "img/BPImage35.pal"
+#incbin "dmp/BPImage35.pal"
 
 BPEntry(0x36,BPImage36,BPPalette36)
 ALIGN 4; BPImage36:
-#incbin "img/BPImage36.lz77"
+#incbin "dmp/BPImage36.lz77"
 ALIGN 4; BPPalette36:
-#incbin "img/BPImage36.pal"
+#incbin "dmp/BPImage36.pal"
 
 BPEntry(0x37,BPImage37,BPPalette37)
 ALIGN 4; BPImage37:
-#incbin "img/BPImage37.lz77"
+#incbin "dmp/BPImage37.lz77"
 ALIGN 4; BPPalette37:
-#incbin "img/BPImage37.pal"
+#incbin "dmp/BPImage37.pal"
 
 BPEntry(0x38,BPImage38,BPPalette38)
 ALIGN 4; BPImage38:
-#incbin "img/BPImage38.lz77"
+#incbin "dmp/BPImage38.lz77"
 ALIGN 4; BPPalette38:
-#incbin "img/BPImage38.pal"
+#incbin "dmp/BPImage38.pal"
 
 BPEntry(0x39,BPImage39,BPPalette39)
 ALIGN 4; BPImage39:
-#incbin "img/BPImage39.lz77"
+#incbin "dmp/BPImage39.lz77"
 ALIGN 4; BPPalette39:
-#incbin "img/BPImage39.pal"
+#incbin "dmp/BPImage39.pal"
 
 BPEntry(0x3A,BPImage3A,BPPalette3A)
 ALIGN 4; BPImage3A:
-#incbin "img/BPImage3A.lz77"
+#incbin "dmp/BPImage3A.lz77"
 ALIGN 4; BPPalette3A:
-#incbin "img/BPImage3A.pal"
+#incbin "dmp/BPImage3A.pal"
 
 BPEntry(0x3B,BPImage3B,BPPalette3B)
 ALIGN 4; BPImage3B:
-#incbin "img/BPImage3B.lz77"
+#incbin "dmp/BPImage3B.lz77"
 ALIGN 4; BPPalette3B:
-#incbin "img/BPImage3B.pal"
+#incbin "dmp/BPImage3B.pal"
 
 BPEntry(0x3C,BPImage3C,BPPalette3C)
 ALIGN 4; BPImage3C:
-#incbin "img/BPImage3C.lz77"
+#incbin "dmp/BPImage3C.lz77"
 ALIGN 4; BPPalette3C:
-#incbin "img/BPImage3C.pal"
+#incbin "dmp/BPImage3C.pal"
 
 BPEntry(0x3D,BPImage3D,BPPalette3D)
 ALIGN 4; BPImage3D:
-#incbin "img/BPImage3D.lz77"
+#incbin "dmp/BPImage3D.lz77"
 ALIGN 4; BPPalette3D:
-#incbin "img/BPImage3D.pal"
+#incbin "dmp/BPImage3D.pal"
 
 BPEntry(0x3E,BPImage3E,BPPalette3E)
 ALIGN 4; BPImage3E:
-#incbin "img/BPImage3E.lz77"
+#incbin "dmp/BPImage3E.lz77"
 ALIGN 4; BPPalette3E:
-#incbin "img/BPImage3E.pal"
+#incbin "dmp/BPImage3E.pal"
 
 BPEntry(0x3F,BPImage3F,BPPalette3F)
 ALIGN 4; BPImage3F:
-#incbin "img/BPImage3F.lz77"
+#incbin "dmp/BPImage3F.lz77"
 ALIGN 4; BPPalette3F:
-#incbin "img/BPImage3F.pal"
+#incbin "dmp/BPImage3F.pal"
 
 BPEntry(0x40,BPImage40,BPPalette40)
 ALIGN 4; BPImage40:
-#incbin "img/BPImage40.lz77"
+#incbin "dmp/BPImage40.lz77"
 ALIGN 4; BPPalette40:
-#incbin "img/BPImage40.pal"
+#incbin "dmp/BPImage40.pal"
 
 BPEntry(0x41,BPImage41,BPPalette41)
 ALIGN 4; BPImage41:
-#incbin "img/BPImage41.lz77"
+#incbin "dmp/BPImage41.lz77"
 ALIGN 4; BPPalette41:
-#incbin "img/BPImage41.pal"
+#incbin "dmp/BPImage41.pal"
 
 BPEntry(0x42,BPImage42,BPPalette42)
 ALIGN 4; BPImage42:
-#incbin "img/BPImage42.lz77"
+#incbin "dmp/BPImage42.lz77"
 ALIGN 4; BPPalette42:
-#incbin "img/BPImage42.pal"
+#incbin "dmp/BPImage42.pal"
 
 BPEntry(0x43,BPImage43,BPPalette43)
 ALIGN 4; BPImage43:
-#incbin "img/BPImage43.lz77"
+#incbin "dmp/BPImage43.lz77"
 ALIGN 4; BPPalette43:
-#incbin "img/BPImage43.pal"
+#incbin "dmp/BPImage43.pal"
 
 BPEntry(0x44,BPImage44,BPPalette44)
 ALIGN 4; BPImage44:
-#incbin "img/BPImage44.lz77"
+#incbin "dmp/BPImage44.lz77"
 ALIGN 4; BPPalette44:
-#incbin "img/BPImage44.pal"
+#incbin "dmp/BPImage44.pal"
 
 BPEntry(0x45,BPImage45,BPPalette45)
 ALIGN 4; BPImage45:
-#incbin "img/BPImage45.lz77"
+#incbin "dmp/BPImage45.lz77"
 ALIGN 4; BPPalette45:
-#incbin "img/BPImage45.pal"
+#incbin "dmp/BPImage45.pal"
 
 BPEntry(0x46,BPImage46,BPPalette46)
 ALIGN 4; BPImage46:
-#incbin "img/BPImage46.lz77"
+#incbin "dmp/BPImage46.lz77"
 ALIGN 4; BPPalette46:
-#incbin "img/BPImage46.pal"
+#incbin "dmp/BPImage46.pal"
 
 BPEntry(0x47,BPImage47,BPPalette47)
 ALIGN 4; BPImage47:
-#incbin "img/BPImage47.lz77"
+#incbin "dmp/BPImage47.lz77"
 ALIGN 4; BPPalette47:
-#incbin "img/BPImage47.pal"
+#incbin "dmp/BPImage47.pal"
 
 BPEntry(0x48,BPImage48,BPPalette48)
 ALIGN 4; BPImage48:
-#incbin "img/BPImage48.lz77"
+#incbin "dmp/BPImage48.lz77"
 ALIGN 4; BPPalette48:
-#incbin "img/BPImage48.pal"
+#incbin "dmp/BPImage48.pal"
 
 BPEntry(0x49,BPImage49,BPPalette49)
 ALIGN 4; BPImage49:
-#incbin "img/BPImage49.lz77"
+#incbin "dmp/BPImage49.lz77"
 ALIGN 4; BPPalette49:
-#incbin "img/BPImage49.pal"
+#incbin "dmp/BPImage49.pal"
 
 BPEntry(0x4A,BPImage4A,BPPalette4A)
 ALIGN 4; BPImage4A:
-#incbin "img/BPImage4A.lz77"
+#incbin "dmp/BPImage4A.lz77"
 ALIGN 4; BPPalette4A:
-#incbin "img/BPImage4A.pal"
+#incbin "dmp/BPImage4A.pal"
 
 BPEntry(0x4B,BPImage4B,BPPalette4B)
 ALIGN 4; BPImage4B:
-#incbin "img/BPImage4B.lz77"
+#incbin "dmp/BPImage4B.lz77"
 ALIGN 4; BPPalette4B:
-#incbin "img/BPImage4B.pal"
+#incbin "dmp/BPImage4B.pal"
 
 BPEntry(0x4C,BPImage4C,BPPalette4C)
 ALIGN 4; BPImage4C:
-#incbin "img/BPImage4C.lz77"
+#incbin "dmp/BPImage4C.lz77"
 ALIGN 4; BPPalette4C:
-#incbin "img/BPImage4C.pal"
+#incbin "dmp/BPImage4C.pal"
 
 BPEntry(0x4D,BPImage4D,BPPalette4D)
 ALIGN 4; BPImage4D:
-#incbin "img/BPImage4D.lz77"
+#incbin "dmp/BPImage4D.lz77"
 ALIGN 4; BPPalette4D:
-#incbin "img/BPImage4D.pal"
+#incbin "dmp/BPImage4D.pal"
 
 BPEntry(0x4E,BPImage4E,BPPalette4E)
 ALIGN 4; BPImage4E:
-#incbin "img/BPImage4E.lz77"
+#incbin "dmp/BPImage4E.lz77"
 ALIGN 4; BPPalette4E:
-#incbin "img/BPImage4E.pal"
+#incbin "dmp/BPImage4E.pal"
 
 BPEntry(0x4F,BPImage4F,BPPalette4F)
 ALIGN 4; BPImage4F:
-#incbin "img/BPImage4F.lz77"
+#incbin "dmp/BPImage4F.lz77"
 ALIGN 4; BPPalette4F:
-#incbin "img/BPImage4F.pal"
+#incbin "dmp/BPImage4F.pal"
 
 BPEntry(0x50,BPImage50,BPPalette50)
 ALIGN 4; BPImage50:
-#incbin "img/BPImage50.lz77"
+#incbin "dmp/BPImage50.lz77"
 ALIGN 4; BPPalette50:
-#incbin "img/BPImage50.pal"
+#incbin "dmp/BPImage50.pal"
 
 BPEntry(0x51,BPImage51,BPPalette51)
 ALIGN 4; BPImage51:
-#incbin "img/BPImage51.lz77"
+#incbin "dmp/BPImage51.lz77"
 ALIGN 4; BPPalette51:
-#incbin "img/BPImage51.pal"
+#incbin "dmp/BPImage51.pal"
 
 BPEntry(0x52,BPImage52,BPPalette52)
 ALIGN 4; BPImage52:
-#incbin "img/BPImage52.lz77"
+#incbin "dmp/BPImage52.lz77"
 ALIGN 4; BPPalette52:
-#incbin "img/BPImage52.pal"
+#incbin "dmp/BPImage52.pal"
 
 BPEntry(0x53,BPImage53,BPPalette53)
 ALIGN 4; BPImage53:
-#incbin "img/BPImage53.lz77"
+#incbin "dmp/BPImage53.lz77"
 ALIGN 4; BPPalette53:
-#incbin "img/BPImage53.pal"
+#incbin "dmp/BPImage53.pal"
 
 BPEntry(0x54,BPImage54,BPPalette54)
 ALIGN 4; BPImage54:
-#incbin "img/BPImage54.lz77"
+#incbin "dmp/BPImage54.lz77"
 ALIGN 4; BPPalette54:
-#incbin "img/BPImage54.pal"
+#incbin "dmp/BPImage54.pal"
 
 BPEntry(0x55,BPImage55,BPPalette55)
 ALIGN 4; BPImage55:
-#incbin "img/BPImage55.lz77"
+#incbin "dmp/BPImage55.lz77"
 ALIGN 4; BPPalette55:
-#incbin "img/BPImage55.pal"
+#incbin "dmp/BPImage55.pal"
 
 BPEntry(0x56,BPImage56,BPPalette56)
 ALIGN 4; BPImage56:
-#incbin "img/BPImage56.lz77"
+#incbin "dmp/BPImage56.lz77"
 ALIGN 4; BPPalette56:
-#incbin "img/BPImage56.pal"
+#incbin "dmp/BPImage56.pal"
 
 BPEntry(0x57,BPImage57,BPPalette57)
 ALIGN 4; BPImage57:
-#incbin "img/BPImage57.lz77"
+#incbin "dmp/BPImage57.lz77"
 ALIGN 4; BPPalette57:
-#incbin "img/BPImage57.pal"
+#incbin "dmp/BPImage57.pal"
 
 BPEntry(0x58,BPImage58,BPPalette58)
 ALIGN 4; BPImage58:
-#incbin "img/BPImage58.lz77"
+#incbin "dmp/BPImage58.lz77"
 ALIGN 4; BPPalette58:
-#incbin "img/BPImage58.pal"
+#incbin "dmp/BPImage58.pal"
 
 BPEntry(0x59,BPImage59,BPPalette59)
 ALIGN 4; BPImage59:
-#incbin "img/BPImage59.lz77"
+#incbin "dmp/BPImage59.lz77"
 ALIGN 4; BPPalette59:
-#incbin "img/BPImage59.pal"
+#incbin "dmp/BPImage59.pal"
 
 BPEntry(0x5A,BPImage5A,BPPalette5A)
 ALIGN 4; BPImage5A:
-#incbin "img/BPImage5A.lz77"
+#incbin "dmp/BPImage5A.lz77"
 ALIGN 4; BPPalette5A:
-#incbin "img/BPImage5A.pal"
+#incbin "dmp/BPImage5A.pal"
 
 BPEntry(0x5B,BPImage5B,BPPalette5B)
 ALIGN 4; BPImage5B:
-#incbin "img/BPImage5B.lz77"
+#incbin "dmp/BPImage5B.lz77"
 ALIGN 4; BPPalette5B:
-#incbin "img/BPImage5B.pal"
+#incbin "dmp/BPImage5B.pal"
 
 BPEntry(0x5C,BPImage5C,BPPalette5C)
 ALIGN 4; BPImage5C:
-#incbin "img/BPImage5C.lz77"
+#incbin "dmp/BPImage5C.lz77"
 ALIGN 4; BPPalette5C:
-#incbin "img/BPImage5C.pal"
+#incbin "dmp/BPImage5C.pal"
 
 BPEntry(0x5D,BPImage5D,BPPalette5D)
 ALIGN 4; BPImage5D:
-#incbin "img/BPImage5D.lz77"
+#incbin "dmp/BPImage5D.lz77"
 ALIGN 4; BPPalette5D:
-#incbin "img/BPImage5D.pal"
+#incbin "dmp/BPImage5D.pal"
 
 BPEntry(0x5E,BPImage5E,BPPalette5E)
 ALIGN 4; BPImage5E:
-#incbin "img/BPImage5E.lz77"
+#incbin "dmp/BPImage5E.lz77"
 ALIGN 4; BPPalette5E:
-#incbin "img/BPImage5E.pal"
+#incbin "dmp/BPImage5E.pal"
 
 BPEntry(0x5F,BPImage5F,BPPalette5F)
 ALIGN 4; BPImage5F:
-#incbin "img/BPImage5F.lz77"
+#incbin "dmp/BPImage5F.lz77"
 ALIGN 4; BPPalette5F:
-#incbin "img/BPImage5F.pal"
+#incbin "dmp/BPImage5F.pal"
 
 BPEntry(0x60,BPImage60,BPPalette60)
 ALIGN 4; BPImage60:
-#incbin "img/BPImage60.lz77"
+#incbin "dmp/BPImage60.lz77"
 ALIGN 4; BPPalette60:
-#incbin "img/BPImage60.pal"
+#incbin "dmp/BPImage60.pal"
 
 BPEntry(0x61,BPImage61,BPPalette61)
 ALIGN 4; BPImage61:
-#incbin "img/BPImage61.lz77"
+#incbin "dmp/BPImage61.lz77"
 ALIGN 4; BPPalette61:
-#incbin "img/BPImage61.pal"
+#incbin "dmp/BPImage61.pal"
 
 BPEntry(0x62,BPImage62,BPPalette62)
 ALIGN 4; BPImage62:
-#incbin "img/BPImage62.lz77"
+#incbin "dmp/BPImage62.lz77"
 ALIGN 4; BPPalette62:
-#incbin "img/BPImage62.pal"
+#incbin "dmp/BPImage62.pal"
 
 BPEntry(0x63,BPImage63,BPPalette63)
 ALIGN 4; BPImage63:
-#incbin "img/BPImage63.lz77"
+#incbin "dmp/BPImage63.lz77"
 ALIGN 4; BPPalette63:
-#incbin "img/BPImage63.pal"
+#incbin "dmp/BPImage63.pal"
 
 BPEntry(0x64,BPImage64,BPPalette64)
 ALIGN 4; BPImage64:
-#incbin "img/BPImage64.lz77"
+#incbin "dmp/BPImage64.lz77"
 ALIGN 4; BPPalette64:
-#incbin "img/BPImage64.pal"
+#incbin "dmp/BPImage64.pal"
 
 BPEntry(0x65,BPImage65,BPPalette65)
 ALIGN 4; BPImage65:
-#incbin "img/BPImage65.lz77"
+#incbin "dmp/BPImage65.lz77"
 ALIGN 4; BPPalette65:
-#incbin "img/BPImage65.pal"
+#incbin "dmp/BPImage65.pal"
 
 BPEntry(0x66,BPImage66,BPPalette66)
 ALIGN 4; BPImage66:
-#incbin "img/BPImage66.lz77"
+#incbin "dmp/BPImage66.lz77"
 ALIGN 4; BPPalette66:
-#incbin "img/BPImage66.pal"
+#incbin "dmp/BPImage66.pal"
 
 BPEntry(0x67,BPImage67,BPPalette67)
 ALIGN 4; BPImage67:
-#incbin "img/BPImage67.lz77"
+#incbin "dmp/BPImage67.lz77"
 ALIGN 4; BPPalette67:
-#incbin "img/BPImage67.pal"
+#incbin "dmp/BPImage67.pal"
 
 BPEntry(0x68,BPImage68,BPPalette68)
 ALIGN 4; BPImage68:
-#incbin "img/BPImage68.lz77"
+#incbin "dmp/BPImage68.lz77"
 ALIGN 4; BPPalette68:
-#incbin "img/BPImage68.pal"
+#incbin "dmp/BPImage68.pal"
 
 BPEntry(0x69,BPImage69,BPPalette69)
 ALIGN 4; BPImage69:
-#incbin "img/BPImage69.lz77"
+#incbin "dmp/BPImage69.lz77"
 ALIGN 4; BPPalette69:
-#incbin "img/BPImage69.pal"
+#incbin "dmp/BPImage69.pal"
 
 BPEntry(0x6A,BPImage6A,BPPalette6A)
 ALIGN 4; BPImage6A:
-#incbin "img/BPImage6A.lz77"
+#incbin "dmp/BPImage6A.lz77"
 ALIGN 4; BPPalette6A:
-#incbin "img/BPImage6A.pal"
+#incbin "dmp/BPImage6A.pal"
 
 BPEntry(0x6B,BPImage6B,BPPalette6B)
 ALIGN 4; BPImage6B:
-#incbin "img/BPImage6B.lz77"
+#incbin "dmp/BPImage6B.lz77"
 ALIGN 4; BPPalette6B:
-#incbin "img/BPImage6B.pal"
+#incbin "dmp/BPImage6B.pal"
 
 BPEntry(0x6C,BPImage6C,BPPalette6C)
 ALIGN 4; BPImage6C:
-#incbin "img/BPImage6C.lz77"
+#incbin "dmp/BPImage6C.lz77"
 ALIGN 4; BPPalette6C:
-#incbin "img/BPImage6C.pal"
+#incbin "dmp/BPImage6C.pal"
 
 BPEntry(0x6D,BPImage6D,BPPalette6D)
 ALIGN 4; BPImage6D:
-#incbin "img/BPImage6D.lz77"
+#incbin "dmp/BPImage6D.lz77"
 ALIGN 4; BPPalette6D:
-#incbin "img/BPImage6D.pal"
+#incbin "dmp/BPImage6D.pal"
 
 BPEntry(0x6E,BPImage6E,BPPalette6E)
 ALIGN 4; BPImage6E:
-#incbin "img/BPImage6E.lz77"
+#incbin "dmp/BPImage6E.lz77"
 ALIGN 4; BPPalette6E:
-#incbin "img/BPImage6E.pal"
+#incbin "dmp/BPImage6E.pal"
 
 BPEntry(0x6F,BPImage6F,BPPalette6F)
 ALIGN 4; BPImage6F:
-#incbin "img/BPImage6F.lz77"
+#incbin "dmp/BPImage6F.lz77"
 ALIGN 4; BPPalette6F:
-#incbin "img/BPImage6F.pal"
+#incbin "dmp/BPImage6F.pal"
 
 BPEntry(0x70,BPImage70,BPPalette70)
 ALIGN 4; BPImage70:
-#incbin "img/BPImage70.lz77"
+#incbin "dmp/BPImage70.lz77"
 ALIGN 4; BPPalette70:
-#incbin "img/BPImage70.pal"
+#incbin "dmp/BPImage70.pal"
 
 BPEntry(0x71,BPImage71,BPPalette71)
 ALIGN 4; BPImage71:
-#incbin "img/BPImage71.lz77"
+#incbin "dmp/BPImage71.lz77"
 ALIGN 4; BPPalette71:
-#incbin "img/BPImage71.pal"
+#incbin "dmp/BPImage71.pal"
 
 BPEntry(0x72,BPImage72,BPPalette72)
 ALIGN 4; BPImage72:
-#incbin "img/BPImage72.lz77"
+#incbin "dmp/BPImage72.lz77"
 ALIGN 4; BPPalette72:
-#incbin "img/BPImage72.pal"
+#incbin "dmp/BPImage72.pal"
 

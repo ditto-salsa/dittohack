@@ -28,6 +28,10 @@ PORTRAIT_DMPS       := $(realpath .)/Graphics/Portraits/dmp
 	cd $(dir $<) && $(GRIT) $(notdir $<) $(GRITLZ77ARGS)
 	@mv $(basename $<).img.bin $@
 
+%.lz77: ../png/%.png
+	cd $(dir $<) && $(GRIT) $(notdir $<) $(GRITLZ77ARGS)
+	@mv $(basename $<).img.bin $@
+
 %.4bpp: %.png
 	cd $(dir $<) && $(GRIT) $< $(GRIT4BPPARGS)
 	@mv $(basename $<).img.bin $@
@@ -36,6 +40,12 @@ PORTRAIT_DMPS       := $(realpath .)/Graphics/Portraits/dmp
 	cd $(dir $<) && $(GRIT) $(notdir $<) $(GRITPALETTEARGS)
 	@head -c 32 $(basename $<).pal.bin > $@
 	@rm $(basename $<).pal.bin
+
+%.pal: ../png/%.png
+	cd $(dir $<) && $(GRIT) $(notdir $<) $(GRITPALETTEARGS)
+	@head -c 32 $(basename $<).pal.bin > $@
+	@rm $(basename $<).pal.bin
+
 
 $(PORTRAIT_DMPS):
 	mkdir $@
