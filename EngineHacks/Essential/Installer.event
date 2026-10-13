@@ -38,5 +38,6 @@ POP
 
 #include "AutoGenLeftOAM/Installer.event"
 #include "GameOptionsOnStart.lyn.event"
+#include "LoadCharacterBasesForPlayers.lyn.event"
 
 #include "ResAsMagic.event"

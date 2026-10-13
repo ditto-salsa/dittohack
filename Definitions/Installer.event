@@ -1,6 +1,9 @@
 // Defintions Installer
 
+CharacterDataTable := 0x803D30
 PortraitTable := 0x8ACBC4
 
 #include "Characters.evnum"
 #include "Items.evnum"
+#include "Affinities.evnum"
+#include "Ranks.evnum"

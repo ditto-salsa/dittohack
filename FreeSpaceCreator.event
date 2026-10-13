@@ -1,7 +1,0 @@
-//Destroy vanilla battle anim table and data, palette table and data, battle platform pointer table and data
-PUSH
-	ORG $E47180
-	FILL ($FFFFFF - $E47180)
-POP
-
-FreeSpace:=$08E47180

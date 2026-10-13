@@ -2,7 +2,12 @@
 #include DittoASMDefs.event
 #include "Definitions/Installer.event"
 
-#include "FreeSpaceCreator.event"
+PUSH
+	ORG $E47180
+	FILL ($FFFFFF - $E47180)
+POP
+
+FreeSpace := $08E47180
 
 ORG FreeSpace
 
@@ -14,3 +19,6 @@ MESSAGE Engine Hacks end at CURRENTOFFSET
 #include "Graphics/Installer.event"
 MESSAGE Graphics end at CURRENTOFFSET
 
+// Table Data
+#include "Tables/Installer.event"
+MESSAGE Table Data ends at CURRENTOFFSET
