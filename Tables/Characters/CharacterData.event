@@ -1,0 +1,21 @@
+{
+#include "CharacterDataDefs.event"
+
+Char(Lazarus)
+	Name(0x212)
+	Desc(0x212)
+	MenuClass(Mage_F)
+	Affinity(FireAffin)
+	Portrait(LazarusMug)
+
+	Level(1)
+	HP(22)
+	Str(0)
+	Mag(7)
+	Skl(8)
+	Spd(6)
+	Luck(7)
+	Def(0)
+
+	Anima(DRank)
+}
