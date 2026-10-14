@@ -18,7 +18,7 @@ endif
 include $(DEVKITARM)/base_tools
 
 # Python variable for this evil language
-PYTHON              := python3
+PYTHON              := python
 
 # EA
 EA 					:= $(realpath .)/Tools/EventAssembler
