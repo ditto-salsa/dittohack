@@ -1,6 +1,9 @@
 {
 #include "CharacterDataDefs.event"
 
+//ORG CharacterDataTable+0x34
+//FILL 0xFF*0x34 // Clear vanilla data
+
 Char(Lazarus)
 	Name(0x212)
 	Desc(0x212)
@@ -18,4 +21,5 @@ Char(Lazarus)
 	Def(0)
 
 	Anima(DRank)
+
 }

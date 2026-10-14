@@ -3,14 +3,15 @@
 # =======================
 
 # thanks contro really awesome args you have here
-GRITLZ77ARGS		:= -gu 16 -gzl -gB 4 -p! -m! -ft bin -fh!
-GRIT8BPPLZ77ARGS	:= -gu 16 -gzl -gB 8 -p! -m! -ft bin -fh!
-GRIT4BPPARGS		:= -gu 16 -gB 4 -p! -m! -ft bin -fh!
-GRIT2BPPARGS		:= -gu 16 -gb -gB 2 -p! -m! -ft bin -fh!
-GRITPALETTEARGS		:= -g! -m! -p -ft bin -fh!
-GRIT10PALETTEARGS	:= -g! -m! -p -pe 160 -ft bin -fh!
+GRITLZ77ARGS			:= -gu 16 -gzl -gB 4 -p! -m! -ft bin -fh!
+GRIT8BPPLZ77ARGS		:= -gu 16 -gzl -gB 8 -p! -m! -ft bin -fh!
+GRIT4BPPARGS			:= -gu 16 -gB 4 -p! -m! -ft bin -fh!
+GRIT2BPPARGS			:= -gu 16 -gb -gB 2 -p! -m! -ft bin -fh!
+GRITPALETTEARGS			:= -g! -m! -p -ft bin -fh!
+GRIT10PALETTEARGS		:= -g! -m! -p -pe 160 -ft bin -fh!
 
-PORTRAIT_DMPS       := $(realpath .)/Graphics/Portraits/dmp
+PORTRAIT_DMPS       	:= $(realpath .)/Graphics/Portraits/dmp
+BATTLE_PLATFORM_DMPS	:= $(realpath .)/Graphics/BattlePlatforms/dmp
 
 %.4bpp: %.png
 	cd $(dir $@) && $(GRIT) $< $(GRIT4BPPARGS)
@@ -46,9 +47,11 @@ PORTRAIT_DMPS       := $(realpath .)/Graphics/Portraits/dmp
 	@head -c 32 $(basename $<).pal.bin > $@
 	@rm $(basename $<).pal.bin
 
-
 $(PORTRAIT_DMPS):
 	mkdir $@
 
-%.portrait.event: ../png/%.png $(PORTRAIT_DMPS)
+%.portrait.event: ../png/%.png
 	cd $(dir $<) && $(PORTRAITS2DMP) $(notdir $<)
+
+$(BATTLE_PLATFORM_DMPS):
+	mkdir $@

@@ -34,6 +34,12 @@ EVBIT_MODIFY 1
 SKIPWN
 ENDA
 
+// AntiHuffman hack, by Hextator and Nintenlord
+#include "AntiHuffman.event"
+
+// Animation hacks by Hextator
+#include "AnimationHacks.event"
+
 POP
 
 #include "AutoGenLeftOAM/Installer.event"

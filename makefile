@@ -2,9 +2,6 @@ include tools.mk
 include graphics.mk
 include wizardry.mk
 
-FE8_ROM := FE8_clean.gba
-HACK_ROM := dittohack.gba
-
 # =============================
 # = GENERATING EA DEFINITIONS =
 # =============================
@@ -13,15 +10,33 @@ HACK_ROM := dittohack.gba
 %.evnum: %.enum
 	$(ENUM_DEFS) $< $(basename $<).evnum 32
 
+# ===================
+# = TEXT PROCESSING =
+# ===================
+
+TEXT_DIR 	 	 := $(realpath .)/Text
+TEXT_INSTALLER	 := $(TEXT_DIR)/Installer.event
+TEXT_MAIN		 := $(TEXT_DIR)/Main.txt
+TEXT_DEPENDS	 := $(shell $(EA_DEP) $(TEXT_MAIN) --add-missings)
+TEXT_DEFINITIONS := $(TEXT_DIR)/Definitions.event
+
+$(TEXT_INSTALLER) $(TEXT_DEFINITIONS): $(TEXT_MAIN) $(TEXT_DEPENDS)
+	cd $(TEXT_DIR) && $(TEXT_PROCESS) $(notdir $(TEXT_MAIN)) --installer $(TEXT_INSTALLER) --definitions $(TEXT_DEFINITIONS) --parser-exe $(PARSEFILE)
+
 # ================
 # = MAIN TARGETS =
 # ================
 
-MAIN_EVENT := Main.event
+FE8_ROM  	 := FE8_clean.gba
+HACK_ROM	 := dittohack.gba
+
+MAIN_EVENT 	 := Main.event
 
 MAIN_DEPENDS := $(shell $(EA_DEP) $(MAIN_EVENT) -I $(EA) --add-missings)
 
-hack: $(FE8_ROM) $(MAIN_EVENT) $(MAIN_DEPENDS)
+DIR_DEPENDS  := $(PORTRAIT_DMPS) $(BATTLE_PLATFORM_DMPS)
+
+hack: $(FE8_ROM) $(MAIN_EVENT) $(DIR_DEPENDS) $(TEXT_INSTALLER) $(MAIN_DEPENDS)
 	@cp -f $(FE8_ROM) $(HACK_ROM)
 	$(COLORZCORE) A FE8 -input:$(MAIN_EVENT) -output:$(HACK_ROM) -W:no-redefine:no-set-symbol-macros || rm -f $(HACK_ROM)
 

@@ -11,14 +11,42 @@ FreeSpace := $08E47180
 
 ORG FreeSpace
 
+// Text
+#define TextTable NewTextTable
+#define MaxTextEntries 0x4000
+
+ALIGN 4; TextTable:
+#incbin "Text/NewTextTable.bin"
+ORG TextTable + (MaxTextEntries) * 4
+PUSH
+	ORG 0xA26C
+	POIN TextTable
+	ORG 0xA2A0
+	POIN TextTable
+POP
+
+#include "Text/Installer.event"
+TextSectionEnd := CURRENTOFFSET
+TextSectionSize := CURRENTOFFSET - FreeSpace
+MESSAGE Text ends at CURRENTOFFSET with size TextSectionSize
+
 // Engine hacks
 #include "EngineHacks/Installer.event"
-MESSAGE Engine Hacks end at CURRENTOFFSET
+EngineHacksSectionEnd := CURRENTOFFSET
+EngineHacksSectionSize := CURRENTOFFSET - TextSectionEnd
+MESSAGE Engine Hacks end at CURRENTOFFSET with size EngineHacksSectionSize
 
 // Graphics
 #include "Graphics/Installer.event"
-MESSAGE Graphics end at CURRENTOFFSET
+GraphicsSectionEnd := CURRENTOFFSET
+GraphicsSectionSize := CURRENTOFFSET - EngineHacksSectionEnd
+MESSAGE Graphics end at CURRENTOFFSET with size GraphicsSectionSize
 
 // Table Data
 #include "Tables/Installer.event"
-MESSAGE Table Data ends at CURRENTOFFSET
+TablesSectionEnd := CURRENTOFFSET
+TablesSectionSize := CURRENTOFFSET - GraphicsSectionEnd
+MESSAGE Table Data ends at CURRENTOFFSET with size TablesSectionSize
+
+TotalAdditionSize := CURRENTOFFSET - FreeSpace
+MESSAGE Total addition size is TotalAdditionSize

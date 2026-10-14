@@ -35,3 +35,4 @@ PARSEFILE 			:= $(EA)/Tools/ParseFile$(EXE)
 COMPRESS 			:= $(EA)/Tools/compress$(EXE)
 PORTRAITFORMATTER 	:= $(EA)/Tools/PortraitFormatter$(EXE)
 PORTRAITS2DMP       := $(PYTHON) $(SCRIPT_DIR)/portraits2dmp.py
+TEXT_PROCESS		:= $(PYTHON) $(SCRIPT_DIR)/text-process-classic.py

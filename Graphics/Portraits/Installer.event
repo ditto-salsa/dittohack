@@ -1,37 +1,40 @@
-#define LazarusMug 0x1
+#define LazarusMug 0x2
 #include "dmp/Lazarus.portrait.event"
 
-#define LorienMug 0x2
+#define LorienMug 0x3
 #include "dmp/Lorien.portrait.event"
-#define LorienAltMug 0x3
+#define LorienAltMug 0x4
 #include "dmp/LorienAlt.portrait.event"
 
-#define GrissMug 0x4
+#define GrissMug 0x5
 #include "dmp/Griss.portrait.event"
 
-#define JessMug 0x5
+#define JessMug 0x6
 #include "dmp/Jess.portrait.event"
 
-#define ShinoMug 0x6
+#define ShinoMug 0x7
 #include "dmp/Shino.portrait.event"
 
-#define SamaelMug 0x7
+#define SamaelMug 0x8
 #include "dmp/Samael.portrait.event"
 
-#define SerolMug 0x8
+#define SerolMug 0x9
 #include "dmp/Serol.portrait.event"
 
-#define ThaliaMug 0x9
+#define ThaliaMug 0xA
 #include "dmp/Thalia.portrait.event"
 
-#define OrinocoMug 0xA
+#define OrinocoMug 0xB
 #include "dmp/Orinoco.portrait.event"
 
-#define CeleriaMug 0xB
+#define CeleriaMug 0xC
 #include "dmp/Celeria.portrait.event"
 
-#define SimonMug 0xC
+#define SimonMug 0xD
 #include "dmp/Simon.portrait.event"
 
-#define ReyneMug 0xD
+#define ReyneMug 0xE
 #include "dmp/Reyne.portrait.event"
+
+#define EstherMug 0xF
+#include "dmp/Esther.portrait.event"
