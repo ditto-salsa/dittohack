@@ -41,7 +41,9 @@ hack: $(FE8_ROM) $(MAIN_EVENT) $(DIR_DEPENDS) $(TEXT_INSTALLER) $(MAIN_DEPENDS)
 	$(COLORZCORE) A FE8 -input:$(MAIN_EVENT) -output:$(HACK_ROM) -W:no-redefine:no-set-symbol-macros || rm -f $(HACK_ROM)
 
 clean:
-	@rm -rf $(PORTRAIT_DMPS)/*
+	@rm -rf $(DIR_DEPENDS)
+	@rm -f $(TEXT_DIR)/Installer.event $(TEXT_DIR)/Definitions.event
+	@rm -rf $(TEXT_DIR)/.TextEntries
 	@find . -name *.dmp -type f -delete
 	@find . -name *.lz77 -type f -delete
 	@find . -name *.pal -type f -delete
