@@ -1,5 +1,4 @@
-# 0x212 LazarusName
-Lazarus[X]
+# 0x4FF
+Str[X]
 
-## LazarusDesc
-Chudlet mageling. :D[X]
+#include "CharacterText/Names.txt"

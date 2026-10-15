@@ -15,13 +15,13 @@ include wizardry.mk
 # ===================
 
 TEXT_DIR 	 	 := $(realpath .)/Text
+TEXT_DEFINITIONS := $(TEXT_DIR)/Definitions.event
 TEXT_INSTALLER	 := $(TEXT_DIR)/Installer.event
 TEXT_MAIN		 := $(TEXT_DIR)/Main.txt
 TEXT_DEPENDS	 := $(shell $(EA_DEP) $(TEXT_MAIN) --add-missings)
-TEXT_DEFINITIONS := $(TEXT_DIR)/Definitions.event
 
 $(TEXT_INSTALLER) $(TEXT_DEFINITIONS): $(TEXT_MAIN) $(TEXT_DEPENDS)
-	cd $(TEXT_DIR) && $(TEXT_PROCESS) $(notdir $(TEXT_MAIN)) --installer $(TEXT_INSTALLER) --definitions $(TEXT_DEFINITIONS) --parser-exe $(PARSEFILE)
+	cd $(TEXT_DIR) && $(TEXT_PROCESS) $(notdir $(TEXT_MAIN)) --installer $(notdir $(TEXT_INSTALLER)) --definitions $(notdir $(TEXT_DEFINITIONS)) --parser-exe $(PARSEFILE)
 
 # ================
 # = MAIN TARGETS =

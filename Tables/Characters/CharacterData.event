@@ -5,8 +5,8 @@
 //FILL 0xFF*0x34 // Clear vanilla data
 
 Char(Lazarus)
-	Name(0x212)
-	Desc(0x212)
+	Name(LazarusName)
+	Desc(LazarusName)
 	MenuClass(Mage_F)
 	Affinity(FireAffin)
 	Portrait(LazarusMug)
