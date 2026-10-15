@@ -22,4 +22,40 @@ Char(Lazarus)
 
 	Anima(DRank)
 
+Char(Lorien)
+	Name(LorienName)
+	Desc(LorienName)
+	MenuClass(Necromancer)
+	Affinity(IceAffin)
+	Portrait(LorienMug)
+
+	Level(10)
+	HP(50)
+	Str(14)
+	Mag(26)
+	Skl(26)
+	Spd(20)
+	Luck(19)
+	Def(20)
+
+	Anima(BRank + 20)
+	Dark(SRank)
+
+Char(Samael)
+	Name(SamaelName)
+	Desc(SamaelName)
+	MenuClass(Paladin)
+	Affinity(IceAffin)
+	Portrait(SamaelMug)
+
+	Level(1)
+	HP(32)
+	Str(14)
+	Mag(6)
+	Skl(20)
+	Spd(5)
+	Def(12)
+
+	Lance(CRank + 25)
+	Axe(ARank)
 }

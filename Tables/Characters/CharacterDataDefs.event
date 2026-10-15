@@ -1,4 +1,4 @@
-#define Char(charID) "ORG CharacterDataTable+charID*$34; PUSH; ORG CURRENTOFFSET+$4; BYTE charID; POP"
+#define Char(charID) "ORG CharacterDataTable+charID*$34; FILL $34; PUSH; ORG CURRENTOFFSET+$4; BYTE charID; POP"
 #define Name(textID) "PUSH; SHORT textID; POP"
 #define Desc(textID) "PUSH; ORG CURRENTOFFSET+$2; SHORT textID; POP"
 #define MenuClass(id) "PUSH; ORG CURRENTOFFSET+$5; BYTE id; POP"
