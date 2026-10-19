@@ -7,3 +7,4 @@ PortraitTable := 0x8ACBC4
 #include "Items.evnum"
 #include "Affinities.evnum"
 #include "Ranks.evnum"
+#include "CharClassAttributes.evnum"

@@ -1,0 +1,35 @@
+## LazarusDesc
+LazarusDesc[X]
+
+## LorienDesc
+LorienDesc[X]
+
+## ShinoDesc
+ShinoDesc[X]
+
+## JessDesc
+JessDesc[X]
+
+## SamaelDesc
+SamaelDesc[X]
+
+## RanaDesc
+RanaDesc[X]
+
+## ReyneDesc
+ReyneDesc[X]
+
+## SerolDesc
+SerolDesc[X]
+
+## ThaliaDesc
+ThaliaDesc[X]
+
+## OrinocoDesc
+OrinocoDesc[X]
+
+## CeleriaDesc
+CeleriaDesc[X]
+
+## SimonDesc
+SimonDesc[X]

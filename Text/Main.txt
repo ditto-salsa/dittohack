@@ -2,3 +2,4 @@
 Str[X]
 
 #include "CharacterText/Names.txt"
+#include "CharacterText/Descs.txt"
