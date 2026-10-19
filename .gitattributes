@@ -1,2 +1,9 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+*.md text eol=lf
+*.event text eol=lf
+*.c text eol=lf
+*.asm text eol=lf
+*.enum text eol=lf
+*.txt text eol=lf
+*.py text eol=lf
+makefile text eol=lf
+.git* text eol=lf
