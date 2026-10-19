@@ -1,0 +1,50 @@
+# =====================
+# = POPUP SCRIPT RAWS =
+# =====================
+
+# Ends the popup script.
+POPUP_END, 0x00, 8, -game:FE8 -indexMode:8
+
+# Adds spaces to the popup text
+POPUP_SPACE, 0x01, 8, -game:FE8 -indexMode:8
+	NumSpaces, 4, 4
+
+# Displays the item name of gPopupItem (Set by function SetPopupItem, FE8U:0x1145C)
+POPUP_ITEM_NAME, 0x02, 8, -game:FE8 -indexMode:8
+
+# Displays the item name of gPopupItem, with a capitalised article before it.
+POPUP_ITEM_STR_CAP, 0x03, 8, -game:FE8 -indexMode:8
+
+# Displays the item name of gPopupItem, with an un-capitalised article before it.
+POPUP_ITEM_STR, 0x04, 8, -game:FE8 -indexMode:8
+
+# Displays the name of gpPopupUnit (Set by function SetPopupUnit, FE8U:0x11450)
+POPUP_UNIT_NAME, 0x05, 8, -game:FE8 -indexMode:8
+
+# Displays the text belonging to a text ID in the popup.
+POPUP_MSG, 0x06, 8, -game:FE8 -indexMode:8
+	TextID, 4, 2
+
+# Displays a string in the popup.
+POPUP_STR, 0x07, 8, -game:FE8 -indexMode:8
+	String, 4, 4, -pointer
+
+# Changes the colour of the text for the current point onwards in the popup.
+POPUP_COLOUR, 0x08, 8, -game:FE8 -indexMode:8
+	ColourID, 4, 1
+
+POPUP_COLOR, 0x08, 8, -game:FE8 -indexMode:8
+	ColorID, 4, 1
+
+# Displays the item icon of gPopupItem.
+POPUP_ITEM_ICON, 0x09, 8, -game:FE8 -indexMode:8
+
+# Displays the icon of gPopupItem+0x70. This behaviour should be changed but should produce correct results if using any engine hacks akin to IconRework.
+POPUP_WRANK_ICON, 0x0A, 8, -game:FE8 -indexMode:8
+
+# Displays the value of gPopupNumber (Set by function SetPopupNumber, FE8U:0x11468)
+POPUP_NUM, 0x0B, 8, -game:FE8 -indexMode:8
+
+# Set a sound to be played by the popup.
+POPUP_SOUND, 0x0C, 8, -game:FE8 -indexMode:8
+	SoundID, 4, 2

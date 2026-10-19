@@ -1,0 +1,103 @@
+# ====================
+# = PROC SCRIPT RAWS =
+# ====================
+
+# Ends the proc.
+PROC_END, 0x0000, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+
+# Sets the name field in the proc state to a pointer to a string.
+PROC_NAME, 0x0001, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	NameString, 4, 4, -pointer
+
+# Calls a function with signature `void func(struct Proc* proc);`
+PROC_CALL, 0x0002, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	Function, 4, 4, -pointer
+
+# Set the proc idle callback to a function to be run every frame instead of the script execution, and yields.
+PROC_REPEAT, 0x0003, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	Function, 4, 4, -pointer
+	
+# Sets the proc callback to be run on proc end to a function
+PROC_SET_END_CB, 0x0004, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	Function, 4, 4, -pointer
+
+# Starts a non-blocking child proc of the current proc
+PROC_START_CHILD, 0x0005, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	ProcScript, 4, 4, -pointer
+	
+# Starts a blocking child proc of the current proc
+PROC_START_CHILD_BLOCKING, 0x0006, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	ProcScript, 4, 4, -pointer
+
+# (Bugged!!!) Starts a proc in tree number of this proc's sleepTime field.
+PROC_START_MAIN_BUGGED, 0x0007, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	ProcScript, 4, 4, -pointer
+	
+# If there is the specified proc script running, do not advance and yield.
+PROC_WHILE_EXISTS, 0x0008, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	ProcScript, 4, 4, -pointer
+
+# Ends all procs running the specified proc script.
+PROC_END_EACH, 0x0009, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	ProcScript, 4, 4, -pointer
+
+# Sets all procs running the specified proc script's proc idle callback to null.
+PROC_BREAK_EACH, 0x000A, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	ProcScript, 4, 4, -pointer
+
+# Sets a specified label in this proc script.
+PROC_LABEL, 0x000B, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	LabelIndex, 2, 2
+
+# Goes to a specific label in this proc script.
+PROC_GOTO, 0x000C, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	LabelIndex, 2, 2
+
+# Jumps to a specific proc script.
+PROC_JUMP, 0x000D, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	ProcScript, 4, 4, -pointer
+
+# Sets the sleep time field in the proc state to a value, and sets the proc's idle callback to the sleeping callback. Yields. If value is 0, do not set the callback.
+PROC_SLEEP, 0x000E, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	SleepTime, 2, 2
+
+# Alias for `PROC_SLEEP 0'. Acts to yield the proc once.
+PROC_YIELD, 0x000E, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+
+# Sets the mark field in the proc state to a value.
+PROC_SET_MARK, 0x000F, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	Mark, 2, 2
+
+# Doesn't advance, and yields. Prevents any further instructions to be executed at all.
+PROC_BLOCK, 0x0010, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+
+# End this proc if any other proc exists running the same proc script as this proc.
+PROC_END_IF_DUPLICATE, 0x0011, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+
+# Sets bit 0x4 in the statebits field in the proc state.
+PROC_SET_BIT4, 0x0012, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+
+# Does nothing.
+PROC_13, 0x0013, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+
+# Calls a function with signature `int func(struct Proc* proc);`. If the function returns 1, doesn't advance and yields.
+PROC_WHILE, 0x0014, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	Function, 4, 4, -pointer
+
+# Does nothing. (Supposedly might do things in FE6/7? Cannot find info on this)
+PROC_15, 0x0015, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+
+# Calls a function with signature `int func(struct Proc* proc);`, if the function returns 0, yields.
+PROC_CALL_CAN_YIELD, 0x0016, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	Function, 4, 4, -pointer
+
+# End all other procs running the same proc script as this proc.
+PROC_END_DUPLICATES, 0x0017, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+
+# Calls a function with an argument, function signature `int routine(short sarg, ProcState* state);`. If the function returns 0, yields.
+PROC_CALL_ARG, 0x0018, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
+	Argument, 2, 2
+	Function, 4, 4, -pointer
+
+# Does nothing.
+PROC_19, 0x0019, 8, -game:FE6:FE7:FE7J:FE8 -indexMode:8
