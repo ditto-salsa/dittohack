@@ -38,3 +38,6 @@
 
 #define EstherMug 0xF
 #include "dmp/Esther.portrait.event"
+
+#define CadaverMug 0x10
+#include "dmp/Cadaver.portrait.event"

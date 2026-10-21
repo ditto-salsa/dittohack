@@ -23,6 +23,17 @@ TEXT_DEPENDS	 := $(shell $(EA_DEP) $(TEXT_MAIN) --add-missings)
 $(TEXT_INSTALLER) $(TEXT_DEFINITIONS): $(TEXT_MAIN) $(TEXT_DEPENDS)
 	cd $(TEXT_DIR) && $(TEXT_PROCESS) $(notdir $(TEXT_MAIN)) --installer $(notdir $(TEXT_INSTALLER)) --definitions $(notdir $(TEXT_DEFINITIONS)) --parser-exe $(PARSEFILE)
 
+# =======================
+# = MAP DATA PROCESSING =
+# =======================
+
+%.event %_data.dmp: %.tmx
+	$(TMX2EA) $< > /dev/null
+
+# For tileset config compression.
+%.lz77: %.mapchip
+	$(COMPRESS) $< > $@
+
 # ================
 # = MAIN TARGETS =
 # ================

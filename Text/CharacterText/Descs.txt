@@ -13,6 +13,9 @@ JessDesc[X]
 ## SamaelDesc
 SamaelDesc[X]
 
+## CadaverDesc
+CadaverDesc[X]
+
 ## RanaDesc
 RanaDesc[X]
 

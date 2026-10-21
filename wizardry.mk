@@ -12,7 +12,7 @@ LYN_REFERENCE := Tools/ref/Definitions.o
 # compilation flags
 ARCH := -mcpu=arm7tdmi -mthumb -mthumb-interwork
 CFLAGS := $(ARCH) $(INCFLAGS) -Wall -mtune=arm7tdmi -O3 -mlong-calls -std=c99
-ASMFLAGS := $(ARCH) $(INCFLAGS)
+ASMFLAGS := $(ARCH) -I Tools/ref
 
 $(LYN_REFERENCE):
 	$(MAKE) -C Tools/ref Definitions.o
@@ -27,7 +27,7 @@ $(LYN_REFERENCE):
 
 # ASM to OBJ rule
 %.o: %.asm
-	$(AS) $(ARCH) $< -o $@
+	$(AS) $(ASMFLAGS) $< -o $@
 
 %.bin: %.o
 	$(OBJCOPY) -S $< -O binary $@

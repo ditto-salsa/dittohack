@@ -1,0 +1,189 @@
+## Ch1_SandlotCityName
+Sandlot City[X]
+
+## Ch1_LorienShinoStartEventConvo
+[MidLeft][LoadShino][MidRight][LoadLorien]
+
+[MidLeft]
+You did not in any way[n]
+need to blast his face off.[an]
+What ever would he have done?[an]
+
+[MidRight]
+Stabbed one of you in the back,[n]
+called for reinforcements,[an]
+a great many number of things![n]
+You're simply too weak of heart.[an]
+All of these dissident scum want[n]
+us dead: "us" does include you.[an]
+Be selfish, it will save you.[an]
+
+[MidLeft]
+[Beat]Can we carry on now?[n]
+Tired of listening to you yap.[an]
+We're here for the job - nothing else.[an]
+[MidLeft][ClearFace]
+
+[MidRight]
+Insolent[Beat]![an]
+They're lucky they're getting[n]
+paid at all[Beat][an]
+If only I had brought any thralls[n]
+with me. But any corpse would do.[an]
+A barman, perhaps? Ohoho[Beat][A][X]
+
+## Ch1_WildaChargeDialogue
+[MidRight][LoadWilda]
+
+[MidRight]
+My arm is still crippled[Beat][an]
+But these army bastards[n]
+won't have an easy time[an]
+taking our city![an]
+They can take it over my,[n]
+Wilda the Wildflower's,[an]
+dead body![a][X]
+
+## Ch1_DonnetWarningDialogue
+[MidRight][LoadDonnet]
+
+[MidRight]
+Damn it![an]
+When are those 
+stragglers coming?[an]
+I need everyone I can,[n]
+right here, right now![a][X]
+
+## Ch1_CapturedNorth
+[MidLeft][LoadCurrentPortrait]
+
+[MidLeft]
+That's the north gate.[A][X]
+
+## Ch1_CapturedNorthNoFace
+[ToggleMouthMove](That's the north gate.)[ToggleMouthMove][A][X]
+
+## Ch1_CapturedSouth
+[MidLeft][LoadCurrentPortrait]
+
+[MidLeft]
+That's the south gate.[A][X]
+
+## Ch1_CapturedSouthNoFace
+[ToggleMouthMove](That's the south gate.)[ToggleMouthMove][A][X]
+
+## Ch1_CapturedArena
+[MidLeft][LoadCurrentPortrait]
+
+[MidLeft]
+That's the north gate.[A][X]
+
+## Ch1_CapturedArenaNoFace
+[ToggleMouthMove](That's the north gate.)[ToggleMouthMove][A][X]
+
+## Ch1_AskDestroyVillage
+Destroy this house?[n]
+[No][X]
+
+## Ch1_VulnHouseDialogue
+[FarLeft][LoadGingerLady][MidRight][LoadCurrentPortrait]
+
+[FarLeft]
+Please! Just go away![n]
+We don't want any of this![an]
+Just take what you're[n]
+going to take and go![a][X]
+
+## Ch1_LoreHouseDialogue
+[MidLeft][LoadScruffyMan][MidRight][LoadCurrentPortrait]
+
+[MidLeft]
+Yer a bunch of feisty fools![n]
+These traitorous sorts, they[an]
+jist keep on comin', and there's[n]
+mare o them, aye?[an]
+But the mare o them?[n]
+No the same as these thugs.[an]
+I'd be careful[Beat][a][X]
+
+## Ch1_JavelinHouseDialogue
+[MidRight][LoadCurrentPortrait]
+
+[MidRight]
+There's nobody here[Beat][n]
+Oh, what's this?[a][X]
+
+## Ch1_InnEmptySysText
+The inn is now empty, save[n]
+for the barman's body laying[n]
+lifeless over the counter.[A][X]
+
+## Ch1_CadaverSummonedSysText
+But of course, you had[n]
+additional plans in mind for him.[A][X]
+
+## Ch1_LazarusSelectQuote
+[MidLeft][LoadLazarus]
+
+[MidLeft]
+In and out, Lazarus.[n]
+You'll be just fine.[an]
+You've got Jess and Shino,[n]
+not to mention Samael.[an]
+Nothing bad is gonna happen.[n]
+In[Beat][MidLeft][MoveMidLeft][MidLeft][.5] and out[Beat][.7][A][X]
+
+## Ch1_LorienSelectQuote
+[MidLeft][LoadLorienAlt]
+
+[MidLeft]
+These mercenaries better[n]
+do a good job for me[Beat][an]
+Heh. If not, there's always[n]
+the afterlife to serve me from![A][X]
+
+## Ch1_LorienSelectSysText
+Lorien, as you might have figured[n]
+out already, is a necromancer.[an]
+In gameplay, this means she can sometimes[n]
+have special events when visiting places[n]
+that can result in him raising the dead,[an]
+or some other necromantic effect of[n]
+their flippant choosing.[an]
+That inn, notably, had a barkeep...[an][X]
+
+## Ch1_JessSelectQuote
+[MidLeft][LoadJess]
+
+[MidLeft]
+Heh. None of these puny[n]
+fighters stand a chance![an]
+I am Jess, Oblivion's Blade![n]
+Hyahhh! Come at me![A][X]
+
+## Ch1_SamaelSelectQuote
+[MidLeft][LoadSamael]
+
+[MidLeft]
+Another day, another job.[n]
+Although this is more[Beat][an]
+disagreeable than our normal.[n]
+[Beat]My faith is with you, Shino.[an]
+Do not lead us astray.[A][X]
+
+## Ch1_ShinoSelectQuote
+[MidLeft][LoadShino]
+
+[MidLeft]
+Damn it, Lorien![n]
+Ugh[Beat] Guess it's up to us[an]
+to handle this district, huh?[n]
+At least it's easy pay![a][X]
+
+## Ch1_CadaverSelectSysText
+The cadaver is an Undead.[n]
+Lorien's summoning is not perfect,[n]
+and as such the cadaver will[n]
+re-expire after the chapter ends.[an]
+All of its belongings will be sent[n]
+to the convoy at that time.[A][X]

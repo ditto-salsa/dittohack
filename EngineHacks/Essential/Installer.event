@@ -40,10 +40,14 @@ ENDA
 // Animation hacks by Hextator
 #include "AnimationHacks.event"
 
+// Stop CHECK_ACTIVEID from softlocking if the ID being checked against doesn't exist
+ORG 0x101E4
+SHORT 0x46C0 0x46C0
+
 POP
 
 #include "AutoGenLeftOAM/Installer.event"
 #include "GameOptionsOnStart.lyn.event"
-#include "LoadCharacterBasesForPlayers.lyn.event"
+#include "LoadCharacterBasesForPlayersAndBosses.lyn.event"
 
 #include "ResAsMagic.event"

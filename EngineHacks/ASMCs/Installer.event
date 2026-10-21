@@ -1,0 +1,21 @@
+
+// Check Active ASMCs
+ThumbFunc(CheckActiveASMCs)
+#incbin "CheckActiveASMCs.bin"
+#define CheckActiveASMC(CharID) "BYTE CharID 0x20; B(CheckActiveASMCs)"
+
+ThumbFunc(CheckActiveLazarus); CheckActiveASMC(Lazarus)
+ThumbFunc(CheckActiveLorien); CheckActiveASMC(Lorien)
+ThumbFunc(CheckActiveJess); CheckActiveASMC(Jess)
+ThumbFunc(CheckActiveSamael); CheckActiveASMC(Samael)
+ThumbFunc(CheckActiveShino); CheckActiveASMC(Shino)
+ThumbFunc(CheckActiveCadaver); CheckActiveASMC(Cadaver)
+ThumbFunc(CheckActiveRana); CheckActiveASMC(Rana)
+ThumbFunc(CheckActiveReyne); CheckActiveASMC(Reyne)
+ThumbFunc(CheckActiveSerol); CheckActiveASMC(Serol)
+ThumbFunc(CheckActiveThalia); CheckActiveASMC(Thalia)
+ThumbFunc(CheckActiveOrinoco); CheckActiveASMC(Orinoco)
+ThumbFunc(CheckActiveCeleria); CheckActiveASMC(Celeria)
+ThumbFunc(CheckActiveSimon); CheckActiveASMC(Simon)
+ThumbFunc(CheckActiveLucien); CheckActiveASMC(Lucien)
+ThumbFunc(CheckActivePeregrine); CheckActiveASMC(Peregrine)

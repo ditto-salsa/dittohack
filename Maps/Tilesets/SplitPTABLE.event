@@ -1,0 +1,69 @@
+/*
+First Empty entry:
+Config - 0xB
+Object/Palette - 0x19
+Tile Anim 1 - 0x6
+Tile Anim 2 - 0x2
+Map Data - 0x1
+Tile Changes - 0x1
+Events - 0x1
+
+Pointers:
+0x19900 - Tile Config
+0x19968 - OBJ
+0x1999C - PAL
+0x30134 - Tile Anim 1 \
+0x30C78 - Tile Anim 2 -\ Use Same Table
+0x34680 - Map Data
+0x346AC - Tile Changes
+0x346DC - Events
+*/
+
+#define SetTilesetConfig(entry, pointer) "PUSH; ORG Config_PTABLE + (entry*4); POIN pointer; POP"
+PUSH; ORG 0x19900; POIN Config_PTABLE; POP
+ALIGN 4; Config_PTABLE:
+FILL 257*4
+
+#define SetTilesetObject(entry, pointer) "PUSH; ORG Object_PTABLE + (entry*4); POIN pointer; POP"
+
+//Code from AuraWolf  - fixes bug where map palette is weird after opening unit menu
+PUSH
+ORG 0x1990C
+#include "LoadChapterMapGfx.lyn.event"
+POP
+
+ALIGN 4; Object_PTABLE:
+FILL 257*4
+
+#define SetTilesetPalette(entry, pointer) "PUSH; ORG Palette_PTABLE + (entry*4); POIN pointer; POP"
+PUSH; ORG 0x1999C; POIN Palette_PTABLE; POP
+ALIGN 4; Palette_PTABLE:
+FILL 257*4
+
+#define SetTileAnim(entry, pointer) "PUSH; ORG TileAnim_PTABLE + (entry*4); POIN pointer; POP"
+PUSH; ORG 0x30134; POIN TileAnim_PTABLE; ORG 0x30C78; POIN TileAnim_PTABLE; POP
+ALIGN 4; TileAnim_PTABLE:
+FILL 257*4
+
+SetTileAnim(0x1, 0x0859D498) //Plains Water TileAnim1
+SetTileAnim(0x2, 0x0859D568) //Village Water TileAnim1
+SetTileAnim(0x3, 0x0859D6F8) //Castle Water TileAnim1
+SetTileAnim(0x4, 0x0859D678) //Stronghold Torch TileAnim1
+SetTileAnim(0x5, 0x0859D520) //Boat Map Water TileAnim1
+
+SetTileAnim(0x6, 0x0859D800) //Lava Cave TileAnim2
+
+#define SetMapData(entry, pointer) "PUSH; ORG MapData_PTABLE + (entry*4); POIN pointer; POP"
+PUSH; ORG 0x34680; POIN MapData_PTABLE; POP
+ALIGN 4; MapData_PTABLE:
+FILL 257*4
+
+#define SetTileChanges(entry, pointer) "PUSH; ORG TileChanges_PTABLE + (entry*4); POIN pointer; POP"
+PUSH; ORG 0x346AC; POIN TileChanges_PTABLE; POP
+ALIGN 4; TileChanges_PTABLE:
+FILL 257*4
+
+#define SetChapterEvents(entry, pointer) "PUSH; ORG ChapterEvents_PTABLE + (entry*4); POIN pointer; POP"
+PUSH; ORG 0x346DC; POIN ChapterEvents_PTABLE; POP
+ALIGN 4; ChapterEvents_PTABLE:
+FILL 257*4

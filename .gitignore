@@ -23,3 +23,6 @@
 *.dmp
 *.o
 *.lyn.event
+
+# pycache
+__pycache__

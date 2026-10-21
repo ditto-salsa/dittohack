@@ -39,13 +39,11 @@ BATTLE_PLATFORM_DMPS	:= $(realpath .)/Graphics/BattlePlatforms/dmp
 
 %.pal: %.png
 	cd $(dir $<) && $(GRIT) $(notdir $<) $(GRITPALETTEARGS)
-	@head -c 32 $(basename $<).pal.bin > $@
-	@rm $(basename $<).pal.bin
+	@mv $(basename $<).pal.bin $@
 
 %.pal: ../png/%.png
 	cd $(dir $<) && $(GRIT) $(notdir $<) $(GRITPALETTEARGS)
-	@head -c 32 $(basename $<).pal.bin > $@
-	@rm $(basename $<).pal.bin
+	@mv $(basename $<).pal.bin $@
 
 $(PORTRAIT_DMPS):
 	mkdir $@
@@ -55,3 +53,4 @@ $(PORTRAIT_DMPS):
 
 $(BATTLE_PLATFORM_DMPS):
 	mkdir $@
+

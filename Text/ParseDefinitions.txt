@@ -64,3 +64,24 @@
 
 [LoadPlaceholder] = [LoadFace][0x1][0x1]
 [LoadCurrentPortrait] = [LoadFace][CurrentPortrait]
+
+[LoadGingerLady] = [LoadFace][0x60][0x1]
+[LoadScruffyMan] = [LoadFace][0x5B][0x1]
+
+[LoadLazarus] = [LoadFace][0x2][0x1]
+[LoadLorien] = [LoadFace][0x3][0x1]
+[LoadLorienAlt] = [LoadFace][0x4][0x1]
+[LoadGriss] = [LoadFace][0x5][0x1]
+[LoadJess] = [LoadFace][0x6][0x1]
+[LoadShino] = [LoadFace][0x7][0x1]
+[LoadSamael] = [LoadFace][0x8][0x1]
+[LoadSerol] = [LoadFace][0x9][0x1]
+[LoadThalia] = [LoadFace][0xA][0x1]
+[LoadOrinoco] = [LoadFace][0xB][0x1]
+[LoadCeleria] = [LoadFace][0xC][0x1]
+[LoadSimon] = [LoadFace][0xD][0x1]
+[LoadReyne] = [LoadFace][0xE][0x1]
+[LoadEsther] = [LoadFace][0xF][0x1]
+[LoadWilda] = [LoadFace][0x62][0x1]
+
+[LoadDonnet] = [LoadFace][0x4D][0x1]

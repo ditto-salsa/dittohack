@@ -1,0 +1,13 @@
+#include "SplitPTABLE.event"
+
+SetTilesetObject(VillageObjectID, VillageObject)
+ALIGN 4; VillageObject:
+#incbin "Village/VillageObject.lz77"
+
+SetTilesetPalette(SnowVillagePaletteID, SnowVillagePalette)
+ALIGN 4; SnowVillagePalette:
+#incbin "Village/VillageObject.pal"
+
+SetTilesetConfig(VillageConfigID, VillageConfig) 
+ALIGN 4; VillageConfig:
+#incbin "Village/VillageConfig.lz77"

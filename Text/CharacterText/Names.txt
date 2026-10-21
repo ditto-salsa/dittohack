@@ -13,6 +13,9 @@ Jess[X]
 ## SamaelName
 Samael[X]
 
+## CadaverName
+Cadaver[X]
+
 ## RanaName
 Rana[X]
 

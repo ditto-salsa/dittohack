@@ -2,13 +2,10 @@
 #include DittoASMDefs.event
 #include "Definitions/Installer.event"
 
-PUSH
-	ORG $E47180
-	FILL ($FFFFFF - $E47180)
-POP
-
 FreeSpace := $08E47180
 
+ORG FreeSpace
+FILL ($08FFFFFF - FreeSpace)
 ORG FreeSpace
 
 // Text
@@ -42,10 +39,23 @@ GraphicsSectionEnd := CURRENTOFFSET
 GraphicsSectionSize := CURRENTOFFSET - EngineHacksSectionEnd
 MESSAGE Graphics end at CURRENTOFFSET with size GraphicsSectionSize
 
+// Maps
+#include "Maps/Tilesets/Installer.event"
+#include "Maps/Installer.event"
+MapsSectionEnd := CURRENTOFFSET
+MapsSectionSize := CURRENTOFFSET - GraphicsSectionEnd
+MESSAGE Maps end at CURRENTOFFSET with size MapsSectionSize
+
+// Events
+#include "Events/Installer.event"
+EventsSectionEnd := CURRENTOFFSET
+EventsSectionSize := CURRENTOFFSET - MapsSectionEnd
+MESSAGE Events end at CURRENTOFFSET with size EventsSectionSize
+
 // Table Data
 #include "Tables/Installer.event"
 TablesSectionEnd := CURRENTOFFSET
-TablesSectionSize := CURRENTOFFSET - GraphicsSectionEnd
+TablesSectionSize := CURRENTOFFSET - EventsSectionEnd
 MESSAGE Table Data ends at CURRENTOFFSET with size TablesSectionSize
 
 TotalAdditionSize := CURRENTOFFSET - FreeSpace

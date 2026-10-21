@@ -1,0 +1,315 @@
+SetChapterEvents(Ch1EventsID, ThisChapter)
+PUSH
+ORG 0x8B0890+0x74 // evil temp solution until I write ChapterData setters
+BYTE Ch1EventsID
+POP
+
+NorthSeizedFlag   := 0x7
+SouthSeizedFlag   := 0x8
+ArenaSeizedFlag   := 0x9
+CadaverInnFlag    := 0xA
+LazarusSelectFlag := 0xB
+LorienSelectFlag  := 0xC
+JessSelectFlag    := 0xD
+SamaelSelectFlag  := 0xE
+ShinoSelectFlag   := 0xF
+CadaverSelectFlag := 0x10
+
+ALIGN 4; ThisChapter:
+POIN TurnEvents
+POIN TalkEvents
+POIN MapObjectEvents
+POIN MiscBasedEvents
+POIN OnSelectEvents OnDecidedEvents OnReachedEvents
+POIN Tutorial
+POIN TrapData TrapData
+POIN PlayerUnits PlayerUnits
+POIN 0 0 0 0 0 0
+POIN StartEvent EndEvent
+
+OnDecidedEvents:
+OnReachedEvents:
+Tutorial:
+WORD 0
+
+TrapData:
+ENDTRAP
+
+ALIGN 4; TurnEvents:
+TurnEventEnemy(0, WildaCharge, 2)
+TurnEventPlayer(0, DonnetWarning, 4)
+TurnEventPlayer(0, T5_Reinforcements, 5)
+TalkEvents:
+END_MAIN
+
+ALIGN 4; MapObjectEvents:
+LOCA NorthSeizedFlag NorthSeized [4, 0] 0x11
+LOCA SouthSeizedFlag SouthSeized [11, 15] 0x11
+LOCA ArenaSeizedFlag ArenaSeized [11, 4] 0x11
+House(0, VulnHouse, 3, 7)
+House(0, LoreHouse, 7, 10)
+House(0, JavelinHouse, 11, 9)
+House(CadaverInnFlag, CadaverInn, 3, 13)
+END_MAIN
+
+ALIGN 4; MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+ALIGN 4; OnSelectEvents:
+SHORT 0xE LazarusSelectFlag; POIN LazarusSelect CheckActiveLazarus
+SHORT 0xE LorienSelectFlag; POIN LorienSelect CheckActiveLorien
+SHORT 0xE JessSelectFlag; POIN JessSelect CheckActiveJess
+SHORT 0xE SamaelSelectFlag; POIN SamaelSelect CheckActiveSamael
+SHORT 0xE ShinoSelectFlag; POIN ShinoSelect CheckActiveShino
+SHORT 0xE CadaverSelectFlag; POIN CadaverSelect CheckActiveCadaver
+END_MAIN
+
+ALIGN 4; StartEvent:
+COUNTER_SET 0 0
+LOAD1 1 EnemyUnits; ENUN
+FADU 16
+BROWNBOXTEXT Ch1_SandlotCityName [8,8]
+LOAD1 1 PlayerUnits; ENUN
+CURSOR Shino; CURSOR Lorien; STAL 90; REMOVE_CURSORS
+Text(Ch1_LorienShinoStartEventConvo)
+EventEnd
+
+ALIGN 4; EndEvent:
+MNTS 0
+EventEnd
+
+ALIGN 4; PlayerUnits:
+UNIT Lorien Necromancer 0 Level(6,Ally,False) [3,13] 0 0 1 REDA3R14 [Flux] NoAI
+UNIT Lazarus Mage_F 0 Level(1,Ally,False) [3,13] 0 0 1 REDA2R15 [Fire, Thunder, Vulnerary] NoAI
+UNIT Shino Archer 0 Level(5,Ally,False) [3,13] 0 0 1 REDA4R14 [IronBow, Vulnerary] NoAI
+UNIT Jess Myrmidon_F 0 Level(3,Ally,False) [3,13] 0 0 1 REDA4R15 [IronSword, SlimSword] NoAI
+UNIT Samael Paladin 0 Level(1,Ally,False) [3,13] 0 0 1 REDA1R14 [IronLance, Javelin, Elixir] NoAI
+UNIT
+
+ALIGN 4; UnitsCadaver:
+UNIT Cadaver Revenant 0 Level(2,Ally,False) [3, 13] 0 0 1 REDA3R13 [RottenClaw] NoAI
+UNIT
+
+ALIGN 4; EnemyUnits:
+// Bosses
+UNIT Donnet Archer 0 Level(5,Enemy,False) [5,1] 0 0 0 0 [ShortBow, IronBow] StillAI
+UNIT UnknownBoss Shaman 0 Level(5,Enemy,False) [11,5] 0 0 0 0 [Flux] StillAI
+UNIT WildaBoss Swordmaster_F 0 Level(1,Enemy,False) [13,13] 0 0 0 0 [SlimSword] StillAI
+
+// Misc left Side
+UNIT Dissident Fighter 0 Level(1,Enemy,True) [0,13] 0 0 0 0 [SteelAxe] ChargeAI
+UNIT Dissident Fighter 0 Level(1,Enemy,True) [3,9] 0 0 0 0 [IronAxe] ChargeAI
+UNIT Dissident Archer 0 Level(2,Enemy,True) [0,7] 0 0 0 0 [IronBow] MoveInRangeAI
+UNIT Dissident Mercenary 0 Level(1,Enemy,True) [5,12] 0 0 0 0 [IronSword] ChargeAI
+UNIT Dissident Mercenary 0 Level(1,Enemy,True) [5,6] 0 0 0 0 [SlimSword] ChargeAI
+UNIT Dissident Fighter 0 Level(1,Enemy,True) [1,5] 0 0 0 0 [HandAxe, PoisonAxe] ChargeAI
+
+// Near shaman boss
+UNIT Dissident Archer 0 Level(4,Enemy,True) [11,2] 0 0 0 0 [SteelBow] StillAI
+UNIT Unknown Mage 0 Level(2,Enemy,True) [14,0] 0 0 0 0 [Thunder] ChargeAI
+UNIT Unknown Mage 0 Level(1,Enemy,True) [13,4] 0 0 0 0 [Fire] MoveInRangeAI
+UNIT Unknown Mage 0 Level(2,Enemy,True) [13,5] 0 0 0 0 [Thunder] StillAI
+UNIT Unknown Mage 0 Level(1,Enemy,True) [12,7] 0 0 0 0 [Fire,Thunder] StillAI
+UNIT Dissident Fighter 0 Level(1,Enemy,True) [14,3] 0 0 0 0 [IronAxe] MoveIn2AI
+UNIT Dissident Fighter 0 Level(1,Enemy,True) [13,2] 0 0 0 0 [IronAxe] MoveIn2AI
+
+// Near Donnet
+UNIT Dissident Myrmidon 0 Level(4,Enemy,True) [2,1] 0 0 0 0 [SlimSword, Zanbato] ChargeAI
+UNIT Dissident Myrmidon 0 Level(4,Enemy,True) [7,0] 0 0 0 0 [SlimSword, Zanbato] ChargeAI
+
+// South gate
+UNIT Dissident Knight 0 Level(1,Enemy,True) [10,13] 0 0 0 0 [Javelin] StillAI
+UNIT Dissident Knight 0 Level(1,Enemy,True) [11,13] 0 0 0 0 [Javelin] StillAI
+UNIT Dissident Archer 0 Level(4,Enemy,True) [10,14] 0 0 0 0 [Longbow] StillAI
+UNIT Dissident Mercenary 0 Level(4,Enemy,True) [11,14] 0 0 0 0 [LightBrand] StillAI
+
+// Misc right side
+UNIT Dissident Soldier 0 Level(1,Enemy,True) [8,11] 0 0 0 0 [IronLance] ChargeAI
+UNIT Dissident Soldier 0 Level(1,Enemy,True) [14,9] 0 0 0 0 [IronLance] MoveInRangeAI
+UNIT Dissident Mercenary 0 Level(1,Enemy,True) [13,11] 0 0 0 0 [IronSword] MoveInRangeAI
+UNIT
+
+ALIGN 4; Units_T5_Reinforcements:
+UNIT Dissident Archer 0 Level(1,Enemy,True) [2,0] 0 0 1 REDA2R0 [IronBow] [0, 0, 4, 0]
+UNIT Dissident Fighter 0 Level(1,Enemy,True) [5,0] 0 0 1 REDA5R0 [SteelAxe] [0, 0, 4, 0]
+UNIT Dissident Mercenary 0 Level(2,Enemy,True) [4,0] 0 0 1 REDA4R0 [SlimSword] [0, 0, 4, 0]
+UNIT
+
+
+ALIGN 4; WildaCharge:
+CAMERA WildaBoss
+CURSOR WildaBoss; STAL 60; REMOVE_CURSORS
+Text(Ch1_WildaChargeDialogue)
+EventEnd
+
+ALIGN 4; DonnetWarning:
+CHECK_EXISTS Donnet
+BEQ s0 sC 0
+	ENUT 0x11 // Allow the turn 5 reinforcements to run
+	CAMERA Donnet
+	CURSOR Donnet; STAL 60; REMOVE_CURSORS
+	Text(Ch1_DonnetWarningDialogue)
+LABEL 0
+EventEnd
+
+ALIGN 4; T5_Reinforcements:
+CHECK_EVENTID 0x11
+BEQ s0 sC 0
+	LoadReinforcements(Units_T5_Reinforcements)
+LABEL 0
+EventEnd
+
+ALIGN 4; NorthSeized:
+SVAL s1 Ch1_CapturedNorth
+SVAL s2 Ch1_CapturedNorthNoFace
+CALL TextChangeIfCadaver
+CALL CheckForAllPointsSeized
+EventEnd
+
+ALIGN 4; SouthSeized:
+SVAL s1 Ch1_CapturedSouth
+SVAL s2 Ch1_CapturedSouthNoFace
+CALL TextChangeIfCadaver
+CALL CheckForAllPointsSeized
+EventEnd
+
+ALIGN 4; ArenaSeized:
+SVAL s1 Ch1_CapturedArena
+SVAL s2 Ch1_CapturedArenaNoFace
+CALL TextChangeIfCadaver
+CALL CheckForAllPointsSeized
+EventEnd
+
+ALIGN 4; TextChangeIfCadaver:
+CHECK_ACTIVEID Cadaver
+BEQ s0 sC 0
+	SVAL sB 0x4FFFF // centered X, y = 4
+	SOLOTEXTBOXSTART
+	TEXTSHOW 0xFFFF
+	TEXTEND
+	REMA
+	GOTO 1
+LABEL 0
+	SADD s2 s0 s1
+	Text(0xFFFF)
+LABEL 1
+EventEnd
+
+ALIGN 4; CheckForAllPointsSeized:
+CHECK_EVENTID 0x7
+BEQ s0 sC 0
+CHECK_EVENTID 0x8
+BEQ s0 sC 0
+CHECK_EVENTID 0x9
+BEQ s0 sC 0
+ENUT 0x3
+CALL EndEvent
+LABEL 0
+EventEnd
+
+ALIGN 4; VulnHouse:
+CHECK_ACTIVEID Lorien
+BNE s0 sC 0
+CHECK_ACTIVEID Cadaver
+BNE s0 sC 0
+	SystemText(Ch1_AskDestroyVillage)
+	SVAL s1 1
+	BNE s1 sC 1
+LABEL 0
+	COUNTER_INC 0
+	TILECHANGE 0
+	GOTO 2
+LABEL 1
+	CALL VulnHouseDialogue
+	TILECHANGE 1
+LABEL 2
+GiveItemToActive(Vulnerary)
+EventEnd
+
+VulnHouseDialogue: HouseEvent(Ch1_VulnHouseDialogue, 1)
+
+ALIGN 4; LoreHouse:
+CHECK_ACTIVEID Lorien
+BNE s0 sC 0
+CHECK_ACTIVEID Cadaver
+BNE s0 sC 0
+	SystemText(Ch1_AskDestroyVillage)
+	SVAL s1 1
+	BNE s1 sC 1
+LABEL 0
+	COUNTER_INC 0
+	TILECHANGE 2
+	GOTO 2
+LABEL 1
+	CALL LoreHouseDialogue
+	TILECHANGE 3
+LABEL 2
+EventEnd
+
+LoreHouseDialogue: HouseEvent(Ch1_LoreHouseDialogue, 1)
+
+ALIGN 4; JavelinHouse:
+CHECK_ACTIVEID Lorien
+BNE s0 sC 0
+CHECK_ACTIVEID Cadaver
+BNE s0 sC 0
+	SystemText(Ch1_AskDestroyVillage)
+	SVAL s1 1
+	BNE s1 sC 1
+LABEL 0
+	COUNTER_INC 0
+	TILECHANGE 4
+	GOTO 2
+LABEL 1
+	CALL VulnHouseDialogue
+	TILECHANGE 5
+LABEL 2
+GiveItemToActive(Javelin)
+EventEnd
+
+JavelinHouseDialogue: HouseEvent(Ch1_JavelinHouseDialogue, 1)
+
+ALIGN 4; CadaverInn:
+SystemText(Ch1_InnEmptySysText)
+CHECK_ACTIVEID Lorien
+BEQ s0 sC 0
+	FADI 16
+	STAL 60
+	SOUN 0x13F // Demon king appearance sound
+	LOAD1 1 UnitsCadaver; ENUN
+	STAL 240
+	FADU 16
+	SystemText(Ch1_CadaverSummonedSysText)
+	GOTO 1
+LABEL 0
+	CHECK_EVENTID
+	SADD s2 s0 sC
+	ENUF 0xFFFF
+LABEL 1
+EventEnd
+
+ALIGN 4; LazarusSelect:
+Text(Ch1_LazarusSelectQuote)
+EventEnd
+
+ALIGN 4; LorienSelect:
+Text(Ch1_LorienSelectQuote)
+SystemText(Ch1_LorienSelectSysText)
+EventEnd
+
+ALIGN 4; JessSelect:
+Text(Ch1_JessSelectQuote)
+EventEnd
+
+ALIGN 4; SamaelSelect:
+Text(Ch1_SamaelSelectQuote)
+EventEnd
+
+ALIGN 4; ShinoSelect:
+Text(Ch1_ShinoSelectQuote)
+EventEnd
+
+ALIGN 4; CadaverSelect:
+SystemText(Ch1_CadaverSelectSysText)
+EventEnd

@@ -3,3 +3,5 @@ Str[X]
 
 #include "CharacterText/Names.txt"
 #include "CharacterText/Descs.txt"
+
+#include "ChapterText/Ch1.txt"

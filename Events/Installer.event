@@ -1,0 +1,16 @@
+#include "REDAs.event"
+
+// Enemy AI common definitions
+#define ChargeAI [0, 0, 4, 0]
+#define StillAI [0, 3, 4, 0x20]
+#define MoveInRangeAI [0, 3, 4, 0]
+#define MoveIn2AI [0, 6, 4, 0]
+
+#define EventEnd "EVBIT_T 7; ENDA"
+#define SystemText(id) "TUTORIALTEXTBOXSTART; SVAL sB (-1); TEXTSHOW id; TEXTEND; REMA"
+
+#define GiveItemToActive(item) "SVAL s3 item; GIVEITEM 0xFFFF"
+
+{
+#include "Ch1/Ch1.event"
+}
