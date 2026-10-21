@@ -29,5 +29,5 @@ $(LYN_REFERENCE):
 %.o: %.asm
 	$(AS) $(ASMFLAGS) $< -o $@
 
-%.bin: %.o
+%.dmp: %.o
 	$(OBJCOPY) -S $< -O binary $@

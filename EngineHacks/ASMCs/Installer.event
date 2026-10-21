@@ -1,7 +1,7 @@
 
 // Check Active ASMCs
 ThumbFunc(CheckActiveASMCs)
-#incbin "CheckActiveASMCs.bin"
+#incbin "CheckActiveASMCs.dmp"
 #define CheckActiveASMC(CharID) "BYTE CharID 0x20; B(CheckActiveASMCs)"
 
 ThumbFunc(CheckActiveLazarus); CheckActiveASMC(Lazarus)
