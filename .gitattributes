@@ -6,4 +6,5 @@
 *.txt text eol=lf
 *.py text eol=lf
 makefile text eol=lf
+*.mk text eol=lf
 .git* text eol=lf
