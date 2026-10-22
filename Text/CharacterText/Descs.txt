@@ -36,3 +36,18 @@ CeleriaDesc[X]
 
 ## SimonDesc
 SimonDesc[X]
+
+## DissidentDesc
+DissidentDesc[X]
+
+## UnknownDesc
+UnknownDesc[X]
+
+## DonnetDesc
+DonnetDesc[X]
+
+## UnknownBossDesc
+UnknownBossDesc[X]
+
+## WildaDesc
+WildaDesc[X]

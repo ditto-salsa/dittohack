@@ -1,4 +1,12 @@
+PUSH
+ORG 0x72908
+POIN BossBGMList
+POP
+ALIGN 4; BossBGMList:
+FILL 8*256
+WORD (-1) (-1)
 
 PUSH
 #include "Characters/CharacterData.event"
+#include "ChapterData/ChapterData.event"
 POP

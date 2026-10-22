@@ -1,3 +1,13 @@
+## Ch1_Name
+Unorthodox Methods[X]
+
+## Ch1_ObjectiveWindow
+Seize points[X]
+
+## Ch1_StatusMenu
+Seize the 3[n]
+marked points.[X]
+
 ## Ch1_SandlotCityName
 Sandlot City[X]
 
@@ -76,10 +86,10 @@ That's the south gate.[A][X]
 [MidLeft][LoadCurrentPortrait]
 
 [MidLeft]
-That's the north gate.[A][X]
+That's the arena.[A][X]
 
 ## Ch1_CapturedArenaNoFace
-[ToggleMouthMove](That's the north gate.)[ToggleMouthMove][A][X]
+[ToggleMouthMove](That's the arena.)[ToggleMouthMove][A][X]
 
 ## Ch1_AskDestroyVillage
 Destroy this house?[n]
@@ -150,7 +160,7 @@ have special events when visiting places[n]
 that can result in him raising the dead,[an]
 or some other necromantic effect of[n]
 their flippant choosing.[an]
-That inn, notably, had a barkeep...[an][X]
+That inn, notably, had a barkeep...[a][X]
 
 ## Ch1_JessSelectQuote
 [MidLeft][LoadJess]

@@ -158,4 +158,74 @@ Char(Simon)
 	Con(1)
 
 	Dark(CRank)
+	
+Char(Dissident)
+	Name(DissidentName)
+	Desc(DissidentDesc)
+	MenuClass(Fighter)
+	GenericMini(6)
+	
+Char(Unknown)
+	Name(UnknownName)
+	Desc(UnknownDesc)
+	MenuClass(Mage)
+	GenericMini(4)
+
+Char(Donnet)
+	Name(DonnetName)
+	Desc(DonnetDesc)
+	MenuClass(Archer)
+	Portrait(0x4D)
+	
+	Level(5)
+	HP(27)
+	Str(8)
+	Mag(0)
+	Skl(11)
+	Spd(3)
+	Luck(4)
+	Def(5)
+	
+	Bow(BRank)
+	
+	Attributes(CA_Boss)
+	
+Char(UnknownBoss)
+	Name(UnknownName)
+	Desc(UnknownBossDesc)
+	MenuClass(Shaman)
+	GenericMini(6)
+	
+	Level(5)
+	HP(25)
+	Str(0)
+	Mag(15)
+	Skl(13)
+	Spd(6)
+	Luck(0)
+	Def(8)
+	
+	Dark(CRank)
+	
+	Attributes(CA_Boss)
+
+Char(WildaBoss)
+	Name(WildaName)
+	Desc(WildaDesc)
+	MenuClass(Swordmaster_F)
+	Portrait(0x62)
+	
+	Level(1)
+	HP(21)
+	Str(7)
+	Mag(5)
+	Skl(11)
+	Spd(12)
+	Luck(5)
+	Def(13)
+	Con(-4)
+	
+	Sword(BRank)
+	
+	Attributes(CA_Boss)
 }

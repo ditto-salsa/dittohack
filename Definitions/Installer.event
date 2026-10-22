@@ -1,6 +1,7 @@
 // Defintions Installer
 
 CharacterDataTable := 0x803D30
+CharacterDataTableEntSize := 0x34
 PortraitTable := 0x8ACBC4
 ChapterDataTable := 0x8B0890
 ChapterDataTableEntSize := 148

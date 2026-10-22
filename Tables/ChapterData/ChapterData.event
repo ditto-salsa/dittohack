@@ -1,0 +1,18 @@
+{
+#include "ChapterDataDefs.event"
+
+Chapter(0)
+	ChapterName(Ch1_Name)
+	Events(Ch1EventsID)
+	WMEvents(1)
+	InitialCoords(0,15)
+	InitiallyDark(True)
+	BattleBackgrounds(1)
+	DifficultyAutolevels(0,0,5)
+	
+	AllPhasesBGM(0x4)
+	MapMusicThroughCombat
+	
+	ObjectiveWindowGoal(Ch1_ObjectiveWindow)
+	StatusMenuGoal(Ch1_StatusMenu)
+}

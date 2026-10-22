@@ -1,2 +1,3 @@
+#include "Font.event"
 #include "BattlePlatforms/Installer.event"
 #include "Portraits/Installer.event"

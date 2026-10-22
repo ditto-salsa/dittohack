@@ -1,8 +1,4 @@
 SetChapterEvents(Ch1EventsID, ThisChapter)
-PUSH
-ORG 0x8B0890+0x74 // evil temp solution until I write ChapterData setters
-BYTE Ch1EventsID
-POP
 
 NorthSeizedFlag   := 0x7
 SouthSeizedFlag   := 0x8
