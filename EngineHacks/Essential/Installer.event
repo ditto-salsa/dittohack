@@ -2,7 +2,7 @@ PUSH
 
 // Skip H&S warning screen - circleseverywhere
 ORG 0xCC20C
-SHORT 0x46C0
+NOP
 
 // Disable New Game music - circleseverywhere
 ORG 0xC4A0C
@@ -10,7 +10,7 @@ BYTE 0
 
 // Allow holding A for faster unit movement before game completion - Gryz
 ORG 0x794EE
-SHORT 0x46C0
+NOP
 
 // Disable Mode Coefficient - Venno
 ORG 0x2C474
@@ -18,7 +18,7 @@ BYTE 0
 
 // Disable Intro Cutscene - circleseverywhere
 ORG 0xC6714
-SHORT 0x46C0
+NOP
 
 // Disable Intro repeat(?) & Class Roll - Unknown
 ORG 0xC63AD
@@ -42,12 +42,23 @@ ENDA
 
 // Stop CHECK_ACTIVEID from softlocking if the ID being checked against doesn't exist
 ORG 0x101E4
-SHORT 0x46C0 0x46C0
+NOP; NOP
+
+// Fixed enemy growths
+ORG 0x2B9C4
+#incbin "FixedEnemyGrowths.dmp"
 
 POP
 
-#include "AutoGenLeftOAM/Installer.event"
+#include "AutoGenLeftOAM/Installer.event" // By 7743
 #include "GameOptionsOnStart.lyn.event"
 #include "LoadCharacterBasesForPlayersAndBosses.lyn.event"
+
+// Bosses don't get mode bonuses/maluses
+PUSH
+ORG 0xF814
+jumpToHack(r0, NoModeBonusesForBosses)
+POP
+#include "NoModeBonusesForBosses.lyn.event"
 
 #include "ResAsMagic.event"

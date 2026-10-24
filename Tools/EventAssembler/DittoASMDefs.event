@@ -9,6 +9,7 @@
 #define ThumbFunc(label) "ALIGN 4; PUSH; ORG CURRENTOFFSET+1; label: POP"
 
 // Thumb macros
+#define NOP "SHORT 0x46C0"
 
 #define B(cond, to) "SHORT (1101b << 12)|((cond) << 8)|((((to) - CURRENTOFFSET - 4) >> 1) & 0xFF)"
 #define BX(reg) "SHORT (010001110b << 7)|(((reg) >> 3) << 6)|(((reg) & 111b) << 3)"
