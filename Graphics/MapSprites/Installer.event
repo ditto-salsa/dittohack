@@ -1,0 +1,39 @@
+// Repointing
+PUSH
+ORG 0x26730
+POIN SMSTable
+ORG 0x267B0
+POIN SMSTable
+ORG 0x26838
+POIN SMSTable
+ORG 0x26C88
+POIN SMSTable
+ORG 0x272D0
+POIN SMSTable
+ORG 0x27BB0
+POIN SMSTable
+ORG 0x27C9C
+POIN SMSTable
+ORG 0x27D48
+POIN SMSTable
+ORG 0x27E0C
+POIN SMSTable
+ORG 0x27E9C
+POIN SMSTable
+ORG 0x27F74
+POIN SMSTable
+ORG 0x28064
+POIN SMSTable
+POP
+ALIGN 4; SMSTable:
+#incbin "VanillaSMSTable.bin"
+FILL 0x15*8 // Till entry 0x7F
+
+#define SMSEntry(id, size, img) "PUSH; ORG SMSTable+id*8; SHORT 0 size; POIN img; POP"
+
+SMSEntry(LorienLordSMS, Size_16x32, LorienLordSMS_Image)
+ALIGN 4; LorienLordSMS_Image:
+#incbin "dmp/LorienLordSMS.lz77"
+
+ALIGN 4; LorienLordMMS_Image:
+#incbin "dmp/LorienLordMMS.lz77"

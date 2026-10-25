@@ -34,4 +34,5 @@
 #define Supports(ptr) "PUSH; ORG CURRENTOFFSET+$2C; POIN ptr; POP"
 #define ConversationGroup(id) "PUSH; ORG CURRENTOFFSET+$30; BYTE id; POP"
 
-#define BossBGM(songID) "PUSH; ORG BossBGMTable+((CURRENTOFFSET - CharacterDataTable) / CharacterDataTableEntSize); BYTE ((CURRENTOFFSET - CharacterDataTable) / CharacterDataTableEntSize); ALIGN 4; SHORT songID; POP"
+#define BossBGMTableEntSize 8
+#define BossBGM(songID) "PUSH; ORG BossBGMTable+BossBGMTableEntSize*ReadByteAt(CURRENTOFFSET+4); BYTE ((CURRENTOFFSET - CharacterDataTable) / CharacterDataTableEntSize); ALIGN 4; SHORT songID; POP"

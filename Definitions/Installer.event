@@ -1,15 +1,37 @@
 // Defintions Installer
 
-CharacterDataTable := 0x803D30
+CharacterDataTable        := 0x803D30
 CharacterDataTableEntSize := 0x34
-PortraitTable := 0x8ACBC4
-ChapterDataTable := 0x8B0890
-ChapterDataTableEntSize := 148
+ClassDataTable            := 0x807110
+ClassDataTableEntSize     := 0x54
+PortraitTable             := 0x8ACBC4
+ChapterDataTable          := 0x8B0890
+ChapterDataTableEntSize   := 0x86
+MMSTable                  := 0x9A2DF8
+MMSTableEntSize           := 8
+
+NormalMoveCost            := 0x80B849
+PromotedNormalMoveCost    := 0x08B808
+MagesMoveCost             := 0x80BA10
+CavMoveCost               := 0x80BA92
+PromotedCavMoveCost       := 0x80BAD3
+ArmourMoveCost            := 0x80B88A
+ThiefMoveCost             := 0x80B9CF
+FlierMoveCost             := 0x80BB96
+PirateMoveCost            := 0x80B98E
+BerserkerMoveCost         := 0x80B90C
+BrigandMoveCost           := 0x08B94D
+NomadMoveCost             := 0x80BB55
+CivilianMoveCost          := 0x08BA51
+
+NormalAP                  := 0x1C3D7C
 
 #include "Characters.evnum"
+#include "Classes.evnum"
 #include "Items.evnum"
 #include "Affinities.evnum"
 #include "Ranks.evnum"
 #include "CharClassAttributes.evnum"
 #include "Tilesets.evnum"
 #include "Maps.evnum"
+#include "StandingMapSprites.evnum"

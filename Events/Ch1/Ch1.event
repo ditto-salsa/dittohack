@@ -76,7 +76,7 @@ MNTS 0
 EventEnd
 
 ALIGN 4; PlayerUnits:
-UNIT Lorien Necromancer 0 Level(6,Ally,False) [3,13] 0 0 1 REDA3R14 [Flux] NoAI
+UNIT Lorien LorienLord 0 Level(6,Ally,False) [3,13] 0 0 1 REDA3R14 [Flux] NoAI
 UNIT Lazarus Mage_F 0 Level(1,Ally,False) [3,13] 0 0 1 REDA2R15 [Fire, Thunder, Vulnerary] NoAI
 UNIT Shino Archer 0 Level(5,Ally,False) [3,13] 0 0 1 REDA4R14 [IronBow, Vulnerary] NoAI
 UNIT Jess Myrmidon_F 0 Level(3,Ally,False) [3,13] 0 0 1 REDA4R15 [IronSword, SlimSword] NoAI

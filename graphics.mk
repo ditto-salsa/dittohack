@@ -12,6 +12,7 @@ GRIT10PALETTEARGS		:= -g! -m! -p -pe 160 -ft bin -fh!
 
 PORTRAIT_DMPS       	:= $(realpath .)/Graphics/Portraits/dmp
 BATTLE_PLATFORM_DMPS	:= $(realpath .)/Graphics/BattlePlatforms/dmp
+MAP_SPRITE_DMPS         := $(realpath .)/Graphics/MapSprites/dmp
 
 %.4bpp: %.png
 	cd $(dir $@) && $(GRIT) $< $(GRIT4BPPARGS)
@@ -54,3 +55,5 @@ $(PORTRAIT_DMPS):
 $(BATTLE_PLATFORM_DMPS):
 	mkdir $@
 
+$(MAP_SPRITE_DMPS):
+	mkdir $@

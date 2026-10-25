@@ -1,0 +1,32 @@
+{
+#include "ClassDataDefs.event"
+
+Class(LorienLord)
+	Name(LorienName)
+	Desc(LorienDesc)
+	MenuClass(LorienLord)
+	SMS(LorienLordSMS)
+	SlowWalk(False)
+	
+	RelativePower(3)
+	
+	BaseCon(8)
+	BaseMov(6)
+	
+	MaxHP(80)
+	MaxStr(30)
+	MaxMag(30)
+	MaxSkl(30)
+	MaxSpd(30)
+	MaxDef(30)
+	MaxCon(20)
+	
+	Lance(CRank + 10)
+	Dark(SRank)
+	
+	Attributes(CA_Promoted|CA_Lord)
+	
+	MoveCost(MagesMoveCost)
+	
+	MMS(LorienLordMMS_Image, NormalAP)
+}
