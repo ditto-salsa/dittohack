@@ -1,0 +1,32 @@
+PUSH
+// Support exp values are now C = 1, B = 2, A = 3
+ORG 0x28244
+BYTE 3
+ORG 0x2824C
+BYTE 2
+ORG 0x28254
+BYTE 0
+POP
+
+#define SupportChars(a, b, c, d, e, f, g) "BYTE a b c d e f g"
+#define SupportBase(a, b, c, d, e, f, g) "BYTE a b c d e f g"
+#define SupportGrowth(a, b, c, d, e, f, g) "BYTE a b c d e f g"
+#define SupportCount(n) "BYTE n"
+
+ALIGN 4; LazarusSupports:
+SupportChars(Lorien, Jess, 0, 0, 0, 0, 0)
+SupportBase(1, 1, 0, 0, 0, 0, 0)
+SupportGrowth(0, 0, 0, 0, 0, 0, 0)
+SupportCount(2)
+
+ALIGN 4; LorienSupports:
+SupportChars(Lazarus, 0, 0, 0, 0, 0, 0)
+SupportBase(1, 0, 0, 0, 0, 0, 0)
+SupportGrowth(0, 0, 0, 0, 0, 0, 0)
+SupportCount(1)
+
+ALIGN 4; JessSupports:
+SupportChars(Lazarus, 0, 0, 0, 0, 0, 0)
+SupportBase(1, 0, 0, 0, 0, 0, 0)
+SupportGrowth(0, 0, 0, 0, 0, 0, 0)
+SupportCount(1)
