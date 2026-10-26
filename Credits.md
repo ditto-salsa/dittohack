@@ -10,6 +10,7 @@
 - Skip New Game Text - circleseverywhere
 - Anti-Huffman - Hextator, Nintenlord
 - C01 and C48 animation hacks - Hextator
+- ExtendWeaponDescBox - Vesly
 
 
 ## Portraits
