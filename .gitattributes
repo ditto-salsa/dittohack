@@ -1,6 +1,7 @@
 *.md text eol=lf
 *.event text eol=lf
 *.c text eol=lf
+*.h text eol=lf
 *.asm text eol=lf
 *.enum text eol=lf
 *.txt text eol=lf
