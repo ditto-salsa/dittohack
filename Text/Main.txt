@@ -1,6 +1,9 @@
 # 0x4FF
 Str[X]
 
+# 0x919
+[X]
+
 #include "CharacterText/Names.txt"
 #include "CharacterText/Descs.txt"
 

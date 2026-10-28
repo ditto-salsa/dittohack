@@ -1,0 +1,12 @@
+PUSH
+// Move support list down
+ORG 0x876A4
+BYTE 10
+
+// Stop supports from flashing green
+ORG 0x876B4
+B(0x876BC)
+POP
+
+#include "Page2.lyn.event"
+

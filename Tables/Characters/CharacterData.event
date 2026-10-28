@@ -26,7 +26,7 @@ Char(Lazarus)
 Char(Lorien)
 	Name(LorienName)
 	Desc(LorienDesc)
-	MenuClass(Necromancer)
+	MenuClass(LorienLord)
 	Affinity(IceAffin)
 	Portrait(LorienMug)
 
@@ -38,10 +38,6 @@ Char(Lorien)
 	Spd(11)
 	Luck(11)
 	Def(7)
-
-	Anima(BRank + 20)
-	Dark(SRank)
-	Staff(ARank - 40)
 	
 	Attributes(CA_LockA|CA_LockC)
 
@@ -82,7 +78,7 @@ Char(Shino)
 	Luck(7)
 	Def(3)
 	
-	Bow(CRank)
+	Bow(DRank)
 	
 	Attributes(CA_LockA|CA_LockD)
 	

@@ -1,0 +1,85 @@
+/*
+Let the weapon rank boxes be in this order:
+1   2
+3   4
+5   6
+7   8
+
+1, 2, 3, 4 are already in vanilla, and we only need to adjust the pointers on 3 and 4, and introduce 5, 6, 7, 8.
+
+We also need to move the support r-text (0xA00FB4), and change it to point to 7 on an up press instead of 3.
+
+Left WRanks X is 104
+Right WRanks X is 168
+Y increases by 16 each WRank, 3 and 4 are at Y = 40
+*/
+
+{
+
+#define Name 0xA00EB8
+#define WRank3 0xA00F60
+#define WRank4 0xA00F98
+#define Support 0xA00FB4
+
+PUSH
+
+// Name
+ORG Name+0xC
+POIN WRank7
+
+// WRank 3
+ORG WRank3+0x4
+POIN WRank5
+
+// WRank 4
+ORG WRank4+0x4
+POIN WRank6
+
+// Support
+ORG Support
+POIN WRank7
+WORD 0
+ORG Support+0x11
+BYTE 96
+
+POP
+
+ALIGN 4
+
+WRank5:
+POIN WRank3 // Up
+POIN WRank7 // Down
+POIN Name // Left
+POIN WRank6 // Right
+BYTE 104 56
+SHORT 5-1
+POIN 0 0x88B95
+
+WRank6:
+POIN WRank4 // Up
+POIN WRank8 // Down
+POIN WRank5 // Left
+POIN 0 // Right
+BYTE 168 56
+SHORT 6-1
+POIN 0 0x88B95
+
+WRank7:
+POIN WRank5 // Up
+POIN Support // Down
+POIN Name // Left
+POIN WRank8 // Right
+BYTE 104 72
+SHORT 7-1
+POIN 0 0x88B95
+
+WRank8:
+POIN WRank6 // Up
+POIN Support // Down
+POIN WRank7 // Left
+POIN 0 // Right
+BYTE 168 72
+SHORT 8-1
+POIN 0 0x88B95
+
+}

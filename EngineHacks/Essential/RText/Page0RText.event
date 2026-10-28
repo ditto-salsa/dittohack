@@ -1,0 +1,33 @@
+// Every stat with a bar will display a cap
+{
+PUSH
+
+ORG 0xA00BA8+0x18 // HP
+POIN HbPopulate_SSStatCaps
+
+ORG 0xA00BC4+0x18 // Pow
+POIN HbPopulate_SSStatCaps
+
+ORG 0xA00BE0+0x18 // Skl
+POIN HbPopulate_SSStatCaps
+
+ORG 0xA00BFC+0x18 // Spd
+POIN HbPopulate_SSStatCaps
+
+ORG 0xA00C18+0x18 // Luck
+POIN HbPopulate_SSStatCaps
+
+ORG 0xA00C34+0x18 // Def
+POIN HbPopulate_SSStatCaps
+
+ORG 0xA00C50+0x18 // Res
+POIN HbPopulate_SSStatCaps
+
+ORG 0xA00C6C+0x18 // Mov
+POIN HbPopulate_SSStatCaps
+
+ORG 0xA00C88+0x18 //Con
+POIN HbPopulate_SSStatCaps
+
+POP
+}

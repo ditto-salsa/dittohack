@@ -1,0 +1,7 @@
+#include "RText.lyn.event"
+
+#include "Page0RText.event"
+#include "StatCaps.lyn.event"
+
+#include "Page2RText.event"
+#include "WExp.lyn.event"

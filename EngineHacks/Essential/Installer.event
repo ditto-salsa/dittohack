@@ -48,10 +48,16 @@ NOP; NOP
 ORG 0x2B9C4
 #incbin "FixedEnemyGrowths.dmp"
 
+// No rain or snow move costs
+ORG 0x18D5A
+B(EQ, 0x18D86)
+
 POP
 
 #include "AutoGenLeftOAM/Installer.event" // By 7743
+
 #include "GameOptionsOnStart.lyn.event"
+
 #include "LoadCharacterBasesForPlayersAndBosses.lyn.event"
 
 // Bosses don't get mode bonuses/maluses
@@ -62,3 +68,10 @@ POP
 #include "NoModeBonusesForBosses.lyn.event"
 
 #include "ResAsMagic.event"
+
+#include "MagicAndPhysicalTogether.lyn.event"
+
+#include "ExtendWeaponDescBox/Installer.event" // By Vesly
+
+#include "Statscreen/Installer.event"
+#include "RText/Installer.event"

@@ -4,7 +4,7 @@
 
 # include directory
 INCLUDE_DIRS := Tools/include
-INCFLAGS     := $(foreach dir, $(INCLUDE_DIRS), -I "$(dir)")
+INCFLAGS     := $(foreach dir, $(INCLUDE_DIRS), -I "$(dir)") -I "Text"
 
 # lyn reference
 LYN_REFERENCE := Tools/ref/Definitions.o
