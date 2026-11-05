@@ -2,7 +2,7 @@
 .include "Definitions.s"
 
 CheckActive:
-ldr r1, =0x03004E50
+ldr r1, =gActiveUnit
 ldr r1, [r1]
 ldr r1, [r1]
 ldrb r1, [r1, #4]
