@@ -32,7 +32,7 @@ $(TEXT_INSTALLER) $(TEXT_DEFINITIONS): $(TEXT_MAIN) $(TEXT_DEPENDS)
 
 # For tileset config compression.
 %.lz77: %.mapchip
-	$(COMPRESS) $< > $@
+	$(COMPRESS) $< --to-stdout > $@
 
 # ================
 # = MAIN TARGETS =
@@ -46,7 +46,6 @@ MAIN_EVENT 	 := Main.event
 MAIN_DEPENDS := $(shell $(EA_DEP) $(MAIN_EVENT) -I $(EA) --add-missings)
 
 DIR_DEPENDS  := $(PORTRAIT_DMPS) $(BATTLE_PLATFORM_DMPS) $(MAP_SPRITE_DMPS)
-
 hack: $(FE8_ROM) $(MAIN_EVENT) $(DIR_DEPENDS) $(TEXT_INSTALLER) $(MAIN_DEPENDS)
 	@cp -f $(FE8_ROM) $(HACK_ROM)
 	$(COLORZCORE) A FE8 -input:$(MAIN_EVENT) -output:$(HACK_ROM) -W:no-redefine:no-set-symbol-macros || rm -f $(HACK_ROM)
@@ -59,6 +58,5 @@ clean:
 	@find . -name *.lz77 -type f -delete
 	@find . -name *.pal -type f -delete
 	@find . -name *.4bpp -type f -delete
-	@find . -name *.mapchip.dmp -type f -delete
 	@find . -name *.lyn.event -type f -delete
 	@find . -name *.evnum -type f -delete
