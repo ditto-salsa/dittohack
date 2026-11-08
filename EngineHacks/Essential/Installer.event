@@ -52,6 +52,10 @@ ORG 0x2B9C4
 ORG 0x18D5A
 B(EQ, 0x18D86)
 
+// Crit bonus for swordmasters etc
+ORG 0x2AC4A
+BYTE 30
+
 POP
 
 #include "AutoGenLeftOAM/Installer.event" // By 7743
