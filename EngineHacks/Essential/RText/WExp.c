@@ -7,13 +7,18 @@ void HbPopulate_SSWExp(struct HelpBoxProc* proc)
     proc->item = 0xFFF6 + proc->info->msgId;
 }
 
-void DrawHelpBoxWRankLabels()
+void HbSizer_WRank(struct HelpBoxProc* proc, int width, int height)
 {
-    Text_InsertDrawString(&gHelpBoxSt.text[0], 0, 8, "W. Exp");
-    Text_InsertDrawString(&gHelpBoxSt.text[0], 64, 8, "To Next");
+	if (width < 0x80) 
+        width = 0x80;
+        
+    height += 0x10;
+	
+	proc->wBoxFinal = width;
+	proc->hBoxFinal = height;
 }
 
-void DrawHelpBoxWRankStats(int item)
+void DrawHelpBoxWRanks(int item, struct ProcHelpBoxIntro* proc)
 {
     int rankIndex;
     switch (item) 
@@ -47,6 +52,8 @@ void DrawHelpBoxWRankStats(int item)
         toNext = WPN_EXP_S - wexp;
     }
     
+	Text_InsertDrawString(&gHelpBoxSt.text[0], 0, 8, "W. Exp");
+    Text_InsertDrawString(&gHelpBoxSt.text[0], 64, 8, "To Next");
     Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[0], wexp > 99 ? 50 : 44, 7, wexp == 0 ? 0xFF : wexp);
     Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[0], 116, 7, toNext);
 }

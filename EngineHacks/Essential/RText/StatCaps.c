@@ -7,26 +7,19 @@ void HbPopulate_SSStatCaps(struct HelpBoxProc* proc)
     proc->item = 0xFFED + (((u32)proc->info - 0x08A00BA8) / sizeof (struct HelpBoxInfo));
 }
 
-void DrawHelpBoxStatCapLabels(int item)
+void HbSizer_Stats(struct HelpBoxProc* proc, int width, int height)
 {
-    char* str;
-    switch (item)
-    {
-        case 0xFFF1: // Luck
-        case 0xFFF4: // Mov
-            str = "Universal Cap";
-            break;
-        default:
-            str = "Class Cap";
-            break;
-    }
-    
-    Text_InsertDrawString(&gHelpBoxSt.text[0], 0, 8, str);
+	height += 0x10;
+	
+	proc->wBoxFinal = width;
+	proc->hBoxFinal = height;
 }
 
-void DrawHelpBoxStatCapStats(int item)
-{   
-    int x = 64, cap = 0;
+void DrawHelpBoxStatCaps(int item, struct ProcHelpBoxIntro* proc)
+{	
+	int x = 64, cap = 0;
+	char* str = "Class Cap";
+	
     switch (item)
     {
         case 0xFFED: // HP
@@ -44,6 +37,7 @@ void DrawHelpBoxStatCapStats(int item)
         case 0xFFF1: // Luck
             cap = 30;
             x += 16;
+			str = "Universal Cap";
             break;
         case 0xFFF2:
             cap = gStatScreen.unit->pClassData->maxDef;
@@ -54,11 +48,13 @@ void DrawHelpBoxStatCapStats(int item)
         case 0xFFF4: // Mov
             cap = 15;
             x += 16;
+			str = "Universal Cap";
             break;
         case 0xFFF5:
             cap = gStatScreen.unit->pClassData->maxCon;
             break;
     }
 
+	Text_InsertDrawString(&gHelpBoxSt.text[0], 0, 8, str);
     Text_InsertDrawNumberOrBlank(&gHelpBoxSt.text[0], x, 7, cap);
 }

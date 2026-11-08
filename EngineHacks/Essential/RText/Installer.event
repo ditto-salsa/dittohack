@@ -1,4 +1,8 @@
+#include "GetWeaponTypeDisplayString.lyn.event"
+
 #include "RText.lyn.event"
+
+#include "ClassInfo.lyn.event"
 
 #include "Page0RText.event"
 #include "StatCaps.lyn.event"

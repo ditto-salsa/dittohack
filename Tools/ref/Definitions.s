@@ -1,5 +1,11 @@
 .include "fe8.s" 
 
+.macro function name
+	.global \name
+	.type \name, %function
+	\name:
+.endm
+
 .macro SET_FUNC name, value
 	.global \name
 	.type   \name, function
