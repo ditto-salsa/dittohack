@@ -1,5 +1,14 @@
 PUSH
 
+// 16 tracks 12 sounds - Agro & Brendor
+ORG 0x2900
+SHORT 0xE00C
+ORG 0x2924
+SHORT 0x280C 0xD00E 0x200C
+ORG 0x22440C
+WORD 0x10 0x3006650 0x30067B0; SHORT 0x10
+
+
 // Skip H&S warning screen - circleseverywhere
 ORG 0xCC20C
 NOP

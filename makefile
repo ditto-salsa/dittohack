@@ -34,6 +34,16 @@ $(TEXT_INSTALLER) $(TEXT_DEFINITIONS): $(TEXT_MAIN) $(TEXT_DEPENDS)
 %.lz77: %.mapchip
 	$(COMPRESS) $< --to-stdout > $@
 
+# =========
+# = MUSIC =
+# =========
+
+%.music.event: %.s
+	$(S2EA) $< $@
+
+%.s: %.mid
+	$(MIDI2AGB) -s $(notdir $(basename $<)) -m 40 $< $@
+
 # ================
 # = MAIN TARGETS =
 # ================

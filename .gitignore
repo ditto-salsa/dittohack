@@ -23,6 +23,7 @@
 *.dmp
 *.o
 *.lyn.event
+*.music.event
 
 # pycache
 __pycache__

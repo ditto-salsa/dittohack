@@ -37,3 +37,5 @@ PORTRAITFORMATTER 	:= $(EA)/Tools/PortraitFormatter$(EXE)
 PORTRAITS2DMP       := $(PYTHON) $(SCRIPT_DIR)/portraits2dmp.py
 TEXT_PROCESS		:= $(PYTHON) $(SCRIPT_DIR)/text-process-classic.py
 TMX2EA              := $(PYTHON) $(realpath .)/Tools/tmx2ea/tmx2ea.py
+S2EA                := $(PYTHON) $(SCRIPT_DIR)/s2ea.py
+MIDI2AGB            := $(realpath .)/Tools/midi2agb$(EXE)

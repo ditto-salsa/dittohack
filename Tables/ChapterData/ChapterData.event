@@ -10,7 +10,7 @@ Chapter(0)
 	BattleBackgrounds(1)
 	DifficultyAutolevels(0,0,5)
 	
-	AllPhasesBGM(0x4)
+	AllPhasesBGM(SongKnightOfTheWind)
 	MapMusicThroughCombat
 	
 	ObjectiveWindowGoal(Ch1_ObjectiveWindow)

@@ -39,11 +39,17 @@ GraphicsSectionEnd := CURRENTOFFSET
 GraphicsSectionSize := CURRENTOFFSET - EngineHacksSectionEnd
 MESSAGE Graphics end at CURRENTOFFSET with size GraphicsSectionSize
 
+// Music
+#include "Music/Installer.event"
+MusicSectionEnd := CURRENTOFFSET
+MusicSectionSize := CURRENTOFFSET - GraphicsSectionSize
+MESSAGE Music ends at CURRENTOFFSET with size MusicSectionSize
+
 // Maps
 #include "Maps/Tilesets/Installer.event"
 #include "Maps/Installer.event"
 MapsSectionEnd := CURRENTOFFSET
-MapsSectionSize := CURRENTOFFSET - GraphicsSectionEnd
+MapsSectionSize := CURRENTOFFSET - MusicSectionEnd
 MESSAGE Maps end at CURRENTOFFSET with size MapsSectionSize
 
 // Events
