@@ -39,11 +39,11 @@ $(TEXT_INSTALLER) $(TEXT_DEFINITIONS) &: $(TEXT_MAIN) $(TEXT_DEPENDS)
 # =========
 
 %.music.event: %.s
+	@sed -i "s/song[0-9|A-F|a-f]*/$(shell echo $< | sed "s/.*\///; s/\..*//")/" $<
 	$(S2EA) $< $@
 
 %.s: %.mid
 	$(MIDI2AGB) -s $(notdir $(basename $<)) -m 40 $< $@
-	@sed -i "s/song[0-9|A-F|a-f]*/$(shell echo $< | sed "s/.*\///; s/\..*//")/" $<
 
 # ================
 # = MAIN TARGETS =
