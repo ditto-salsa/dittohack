@@ -21,21 +21,21 @@ include $(DEVKITARM)/base_tools
 PYTHON              := python
 
 # EA
-EA 					:= $(realpath .)/Tools/EventAssembler
-COLORZCORE			:= $(EA)/ColorzCore$(EXE)
+EA                  := $(realpath .)/Tools/EventAssembler
+COLORZCORE          := $(EA)/ColorzCore$(EXE)
 
 SCRIPT_DIR          := $(realpath .)/Tools/Scripts
 
 # Other tools
-LYN 				:= $(realpath .)/Tools/lyn$(EXE)
-EA_DEP 				:= $(realpath .)/Tools/ea-dep$(EXE)
-ENUM_DEFS 			:= $(realpath .)/Tools/enum-defs/enum-defs$(EXE)
-GRIT 				:= $(DEVKITPRO)/tools/bin/grit$(EXE)
-PARSEFILE 			:= $(EA)/Tools/ParseFile$(EXE)
-COMPRESS 			:= $(EA)/Tools/compress$(EXE)
-PORTRAITFORMATTER 	:= $(EA)/Tools/PortraitFormatter$(EXE)
+LYN                 := $(realpath .)/Tools/lyn$(EXE)
+EA_DEP              := $(realpath .)/Tools/ea-dep$(EXE)
+ENUM_DEFS           := $(realpath .)/Tools/enum-defs/enum-defs$(EXE)
+GRIT                := $(DEVKITPRO)/tools/bin/grit$(EXE)
+PARSEFILE           := $(EA)/Tools/ParseFile$(EXE)
+COMPRESS            := $(EA)/Tools/compress$(EXE)
+PORTRAITFORMATTER   := $(EA)/Tools/PortraitFormatter$(EXE)
 PORTRAITS2DMP       := $(PYTHON) $(SCRIPT_DIR)/portraits2dmp.py
-TEXT_PROCESS		:= $(PYTHON) $(SCRIPT_DIR)/text-process-classic.py
+TEXT_PROCESS        := $(PYTHON) $(SCRIPT_DIR)/text-process-classic.py
 TMX2EA              := $(PYTHON) $(realpath .)/Tools/tmx2ea/tmx2ea.py
 S2EA                := $(PYTHON) $(SCRIPT_DIR)/s2ea.py
 MIDI2AGB            := $(realpath .)/Tools/midi2agb$(EXE)

@@ -14,13 +14,13 @@ include wizardry.mk
 # = TEXT PROCESSING =
 # ===================
 
-TEXT_DIR 	 	 := $(realpath .)/Text
+TEXT_DIR         := Text
 TEXT_DEFINITIONS := $(TEXT_DIR)/Definitions.event
-TEXT_INSTALLER	 := $(TEXT_DIR)/Installer.event
-TEXT_MAIN		 := $(TEXT_DIR)/Main.txt
-TEXT_DEPENDS	 := $(shell $(EA_DEP) $(TEXT_MAIN) --add-missings)
+TEXT_INSTALLER   := $(TEXT_DIR)/Installer.event
+TEXT_MAIN        := $(TEXT_DIR)/Main.txt
+TEXT_DEPENDS     := $(shell $(EA_DEP) $(TEXT_MAIN) --add-missings)
 
-$(TEXT_INSTALLER) $(TEXT_DEFINITIONS): $(TEXT_MAIN) $(TEXT_DEPENDS)
+$(TEXT_INSTALLER) $(TEXT_DEFINITIONS) &: $(TEXT_MAIN) $(TEXT_DEPENDS)
 	cd $(TEXT_DIR) && $(TEXT_PROCESS) $(notdir $(TEXT_MAIN)) --installer $(notdir $(TEXT_INSTALLER)) --definitions $(notdir $(TEXT_DEFINITIONS)) --parser-exe $(PARSEFILE)
 
 # =======================
@@ -43,19 +43,21 @@ $(TEXT_INSTALLER) $(TEXT_DEFINITIONS): $(TEXT_MAIN) $(TEXT_DEPENDS)
 
 %.s: %.mid
 	$(MIDI2AGB) -s $(notdir $(basename $<)) -m 40 $< $@
+	@sed -i "s/song[0-9|A-F|a-f]*/$(shell echo $< | sed "s/.*\///; s/\..*//")/" $<
 
 # ================
 # = MAIN TARGETS =
 # ================
 
-FE8_ROM  	 := FE8_clean.gba
-HACK_ROM	 := dittohack.gba
+FE8_ROM      := FE8_clean.gba
+HACK_ROM     := dittohack.gba
 
-MAIN_EVENT 	 := Main.event
+MAIN_EVENT   := Main.event
 
 MAIN_DEPENDS := $(shell $(EA_DEP) $(MAIN_EVENT) -I $(EA) --add-missings)
 
 DIR_DEPENDS  := $(PORTRAIT_DMPS) $(BATTLE_PLATFORM_DMPS) $(MAP_SPRITE_DMPS)
+
 hack: $(FE8_ROM) $(MAIN_EVENT) $(DIR_DEPENDS) $(TEXT_INSTALLER) $(MAIN_DEPENDS)
 	@cp -f $(FE8_ROM) $(HACK_ROM)
 	$(COLORZCORE) A FE8 -input:$(MAIN_EVENT) -output:$(HACK_ROM) -W:no-redefine:no-set-symbol-macros || rm -f $(HACK_ROM)
@@ -70,3 +72,4 @@ clean:
 	@find . -name *.4bpp -type f -delete
 	@find . -name *.lyn.event -type f -delete
 	@find . -name *.evnum -type f -delete
+	@find . -name *.music.event -type f -delete
