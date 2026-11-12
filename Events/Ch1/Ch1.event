@@ -258,7 +258,7 @@ LABEL 0
 	TILECHANGE 4
 	GOTO 2
 LABEL 1
-	CALL VulnHouseDialogue
+	CALL JavelinHouseDialogue
 	TILECHANGE 5
 LABEL 2
 GiveItemToActive(Javelin)
